@@ -1,0 +1,9 @@
+@-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
+@-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
+@-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
+@keyframes         showbar { 0% { top: -40px } 100% { top: 0px } }
+
+@-webkit-keyframes hidebar { 0% { top: 0px } 100% { top: -40px } }
+@-moz-keyframes    hidebar { 0% { top: 0px } 100% { top: -40px } }
+@-o-keyframes      hidebar { 0% { top: 0px } 100% { top: -40px } }
+@keyframes         hidebar { 0% { top: 0px } 100% { top: -40px } }

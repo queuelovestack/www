@@ -1,12 +1,9 @@
-/*
- * reset 
- */
 body{
     line-height:1.4;
     color:#333;
     font-family:arial;
     font-size: 12px;
-    background:white;
+    background: #fff;
 }
 input,textarea,select{
     font-size:12px;
@@ -27,9 +24,7 @@ ul,ol{
 a img{border:0;}
 img{border:0;}
 
-/*
- * common
- */
+
 .l{float:left;}.r{float:right;}.cl{clear:both;}
 .n{font-weight:normal; font-style:normal;}.b{font-weight:bold;}.i{font-style:italic;}
 .fa{font-family:Arial;}.fg{font-family:Georgia;}.ft{font-family:Tahoma;}.fl{font-family:Lucida Console;}.fs{font-family:'宋体';}.fw{font-family:'微软雅黑';}
@@ -162,11 +157,13 @@ img{border:0;}
   -webkit-box-orient: vertical;
 }
 
-/*
- * animation
- */
-@-webkit-keyframes navin { 0% { } 100% { } }
-@-moz-keyframes    navin { 0% { } 100% { } }
-@-ms-keyframes     navin { 0% { } 100% { } }
-@-o-keyframes      navin { 0% { } 100% { } }
-@keyframes         navin { 0% { } 100% { } }
+
+@-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
+@-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
+@-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
+@keyframes         showbar { 0% { top: -40px } 100% { top: 0px } }
+
+@-webkit-keyframes hidebar { 0% { top: 0px } 100% { top: -40px } }
+@-moz-keyframes    hidebar { 0% { top: 0px } 100% { top: -40px } }
+@-o-keyframes      hidebar { 0% { top: 0px } 100% { top: -40px } }
+@keyframes         hidebar { 0% { top: 0px } 100% { top: -40px } }

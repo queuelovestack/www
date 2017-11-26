@@ -3,6 +3,194 @@
 	<head>
 	    <meta charset="UTF-8">
 	    <title></title>
+	    <link rel="stylesheet" href="./resource/css/lib.CSS">
+	    <style>
+	    	html,body {
+	    		height: 100%;
+	    		padding: 0;
+	    		margin: 0;
+	    		background-color: #f7f7f7;
+	    	}
+			
+			#app {
+				width: 1366px;
+				height: 80%;
+				margin: 0 auto;
+			}
+
+	    	#touchbar {
+	    		width: 100%;
+	    	    height: 65px;
+	    	    position: fixed;
+	    	    top: 0px;
+	    	}
+				
+			.touchbar-container {
+				width: 100%;
+				height: 0px;
+				position: relative;
+			}
+				
+			.touchbar-bg1, .touchbar-bg2, .touchbar-bg3,
+			.touchbar-locked, .touchbar-unlocked {
+				background-image: url(./static/img/touchbar.png);
+				background-repeat: no-repeat;
+			}
+			
+			.touchbar-bg1 {
+		    	height: 53px;
+		    	width: 100%;
+		    	position: absolute;
+				top: 0px;
+	    	    right: 80px;
+	    	    background-position: 0px 0px;
+				background-repeat: repeat;
+		    }
+
+			.touchbar-bg2 {
+				width: 67px;
+				height: 80px;
+				position: absolute;
+				top: -15px;
+	    	    right: 13px;
+	    	    background-position: 0px -46px;
+			}
+
+			.touchbar-bg3 {
+		    	height: 53px;
+		    	width: 13px;
+		    	position: absolute;
+				top: 0px;
+	    	    right: 0px;
+				background-position: 0px 0px;
+		    }
+
+			.touchbar-lock {
+				height: 18px;
+		    	width: 18px;
+				cursor: pointer;
+				position: absolute;
+				top: 55px;
+				left: 33px;
+				z-index: 1;
+			}
+
+		    .touchbar-locked {
+				background-position: -108px -56px;
+		    }
+
+			
+			.touchbar-locked:hover {
+				background-position: -108px -76px;
+		    }
+
+			.touchbar-unlocked {
+				background-position: -88px -56px;
+		    }
+
+		    .touchbar-unlocked:hover {
+		    	background-position: -88px -76px;
+		    }
+
+			.show-bar {
+				-webkit-animation: showbar .2s 0s ease both;
+				   -moz-animation: showbar .2s 0s ease both;
+				    -ms-animation: showbar .2s 0s ease both;
+				     -o-animation: showbar .2s 0s ease both;
+				        animation: showbar .2s 0s ease both;
+			}
+			
+			.hide-bar {
+				-webkit-animation: hidebar .5s 0s ease both;
+				   -moz-animation: hidebar .5s 0s ease both;
+				    -ms-animation: hidebar .5s 0s ease both;
+				     -o-animation: hidebar .5s 0s ease both;
+				        animation: hidebar .5s 0s ease both;
+			}
+
+			@-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
+			@-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
+			@-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
+			@keyframes         showbar { 0% { top: -40px } 100% { top: 0px } }
+
+			@-webkit-keyframes hidebar { 0% { top: 0px } 100% { top: -40px } }
+			@-moz-keyframes    hidebar { 0% { top: 0px } 100% { top: -40px } }
+			@-o-keyframes      hidebar { 0% { top: 0px } 100% { top: -40px } }
+			@keyframes         hidebar { 0% { top: 0px } 100% { top: -40px } }
+	    </style>
+	</head>
+	<body>
+		<div id="touchbar">
+			<div class="touchbar-container">
+			    <div class="touchbar-bg1"></div>
+			    <div class="touchbar-bg2">
+				    <div class="touchbar-lock touchbar-locked">
+					</div>
+			    </div>
+			    <div class="touchbar-bg3"></div>
+			</div>
+		</div>
+		<div id="app">
+			
+		</div>
+	</body>
+	<script src="./resource/js/require.js" defer async="true" data-main="./main.js"data-main="js/main"></script>
+	<script>
+		window.onload = function() {
+			
+		}
+
+		var touchbarLock = document.getElementsByClassName("touchbar-lock")[0];
+		var toucharea = document.getElementsByClassName("touchbar-toucharea")[0];
+		var touchbar = document.getElementById("touchbar");
+
+		touchbarLock.addEventListener('click',function(e) {
+			stopDefault();
+			if(e.target.className.indexOf("touchbar-locked") != -1) {
+				e.target.className = "touchbar-lock touchbar-unlocked";
+				 touchbar.addEventListener("mouseleave", touchbarHide);
+                 touchbar.addEventListener("mouseover", touchbarShow);
+			} else {
+                e.target.className = "touchbar-lock touchbar-locked";
+                console.log("locked");
+                 touchbar.removeEventListener("mouseleave", touchbarHide);
+                 touchbar.removeEventListener("mouseover", touchbarShow);
+			}
+		});
+
+		function touchbarHide(e) {
+			if(touchbarLock.className.indexOf("touchbar-locked") != -1)
+				return;
+			setTimeout(function(){
+			       touchbar.className = "hide-bar";
+			},500);
+		} 
+
+		function touchbarShow(e) {
+			console.log("show")
+			if(touchbarLock.className.indexOf("touchbar-locked") != -1)
+				return;
+			setTimeout(function(){
+				if(touchbar.className.indexOf("hide-bar") != -1)
+					touchbar.className = "show-bar";
+			},0);
+		} 
+
+		function stopPropagation(e) {
+	        window.event ? window.event.cancelBubble = true : e.stopPropagation();
+	    }
+
+	     function stopDefault(e) {
+	        window.event ? window.event.returnValue = false : e.preventDefault();
+	     }
+	</script>
+</html>
+
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title></title>
 	    <style>
 	    	html,body {
 	    		height: 100%;
@@ -183,3 +371,4 @@
 	</body>
 	<script src="./resource/js/require.js" defer async="true" data-main="./resource/js/main.js"data-main="js/main"></script>
 </html>
+
