@@ -4,6 +4,7 @@
 	    <meta charset="UTF-8">
 	    <title></title>
 	    <link rel="stylesheet" href="./resource/css/lib.CSS">
+		<link rel="stylesheet" type="text/css" href="./resource/css/index.css">
 	    <style>
 	    	html,body {
 	    		height: 100%;
@@ -12,10 +13,11 @@
 	    		background-color: #f7f7f7;
 	    	}
 			
-			#app {
+			#home {
 				width: 1366px;
 				height: 80%;
 				margin: 0 auto;
+				margin-top: 100px;
 			}
 
 	    	#touchbar {
@@ -130,81 +132,6 @@
 			    <div class="touchbar-bg3"></div>
 			</div>
 		</div>
-		<div id="app">
-			
-		</div>
-	</body>
-	<script src="./resource/js/require.js" defer async="true" data-main="./main.js"data-main="js/main"></script>
-	<script>
-		window.onload = function() {
-			
-		}
-
-		var touchbarLock = document.getElementsByClassName("touchbar-lock")[0];
-		var toucharea = document.getElementsByClassName("touchbar-toucharea")[0];
-		var touchbar = document.getElementById("touchbar");
-
-		touchbarLock.addEventListener('click',function(e) {
-			stopDefault();
-			if(e.target.className.indexOf("touchbar-locked") != -1) {
-				e.target.className = "touchbar-lock touchbar-unlocked";
-				 touchbar.addEventListener("mouseleave", touchbarHide);
-                 touchbar.addEventListener("mouseover", touchbarShow);
-			} else {
-                e.target.className = "touchbar-lock touchbar-locked";
-                console.log("locked");
-                 touchbar.removeEventListener("mouseleave", touchbarHide);
-                 touchbar.removeEventListener("mouseover", touchbarShow);
-			}
-		});
-
-		function touchbarHide(e) {
-			if(touchbarLock.className.indexOf("touchbar-locked") != -1)
-				return;
-			setTimeout(function(){
-			       touchbar.className = "hide-bar";
-			},500);
-		} 
-
-		function touchbarShow(e) {
-			console.log("show")
-			if(touchbarLock.className.indexOf("touchbar-locked") != -1)
-				return;
-			setTimeout(function(){
-				if(touchbar.className.indexOf("hide-bar") != -1)
-					touchbar.className = "show-bar";
-			},0);
-		} 
-
-		function stopPropagation(e) {
-	        window.event ? window.event.cancelBubble = true : e.stopPropagation();
-	    }
-
-	     function stopDefault(e) {
-	        window.event ? window.event.returnValue = false : e.preventDefault();
-	     }
-	</script>
-</html>
-
-<!doctype html>
-<html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-	    <title></title>
-	    <style>
-	    	html,body {
-	    		height: 100%;
-	    	}
-			#home {
-				width: 1366px;
-				height: 100%;
-				background-color: #fff;
-				margin: 0 auto;
-			}
-	    </style>
-		<link rel="stylesheet" type="text/css" href="./resource/css/index.css">
-	</head>
-	<body>
 		<div id="home">
 			<div class="m-border-1 m-inner-1" style="height: auto; min-height: 300px;">
 				<div class="sub-grid1-wr">
@@ -369,6 +296,55 @@
 			</div>
 		</div>
 	</body>
-	<script src="./resource/js/require.js" defer async="true" data-main="./resource/js/main.js"data-main="js/main"></script>
+	<script src="./resource/js/require.js" defer async="true" data-main="./main.js"data-main="js/main"></script>
+	<script>
+		window.onload = function() {
+			
+		}
+
+		var touchbarLock = document.getElementsByClassName("touchbar-lock")[0];
+		var toucharea = document.getElementsByClassName("touchbar-toucharea")[0];
+		var touchbar = document.getElementById("touchbar");
+
+		touchbarLock.addEventListener('click',function(e) {
+			stopDefault();
+			if(e.target.className.indexOf("touchbar-locked") != -1) {
+				e.target.className = "touchbar-lock touchbar-unlocked";
+				 touchbar.addEventListener("mouseleave", touchbarHide);
+                 touchbar.addEventListener("mouseover", touchbarShow);
+			} else {
+                e.target.className = "touchbar-lock touchbar-locked";
+                console.log("locked");
+                 touchbar.removeEventListener("mouseleave", touchbarHide);
+                 touchbar.removeEventListener("mouseover", touchbarShow);
+			}
+		});
+
+		function touchbarHide(e) {
+			if(touchbarLock.className.indexOf("touchbar-locked") != -1)
+				return;
+			setTimeout(function(){
+			       touchbar.className = "hide-bar";
+			},500);
+		} 
+
+		function touchbarShow(e) {
+			console.log("show")
+			if(touchbarLock.className.indexOf("touchbar-locked") != -1)
+				return;
+			setTimeout(function(){
+				if(touchbar.className.indexOf("hide-bar") != -1)
+					touchbar.className = "show-bar";
+			},0);
+		} 
+
+		function stopPropagation(e) {
+	        window.event ? window.event.cancelBubble = true : e.stopPropagation();
+	    }
+
+	     function stopDefault(e) {
+	        window.event ? window.event.returnValue = false : e.preventDefault();
+	     }
+	</script>
 </html>
 
