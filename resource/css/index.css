@@ -7,8 +7,20 @@ form, fieldset, legend, button, input, textarea, th, td {
     padding: 0;
 }
 
+.clear {
+    clear: both;
+}
+
 .clearfix {
     zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
 a {
@@ -67,13 +79,13 @@ a img {
     margin-top: 10px;
 }
 
-.m-navi .sub-grid1 .list {
+.sub-grid1 .list {
     display: block;
     padding-bottom: 10px;
 }
 
 .sub-grid1:hover {
-	background: #f6f6f6;
+	background: #eeeeee;
 }
 
 .sub-grid1 .sub-title {
@@ -81,7 +93,7 @@ a img {
 	line-height: 36px;
 	padding: 0 10px;
 	height: 100%;
-	border-bottom: 1px dashed #eee;
+	border-bottom: 1px dashed #ddd;
 }
 
 .sub-grid1 .sub-title a {
