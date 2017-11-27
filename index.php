@@ -112,9 +112,51 @@
 						</div>
 						<ul class="list clearfix">
 							<li>
-								<a href="http://www.baidu.com/" target="_blank">
-									<img alt="QQ" src="http://www.baidu.com/favicon.ico">
+								<a href="https://im.qq.com/" target="_blank">
+									<img alt="QQ" src="https://im.qq.com/favicon.ico">
 									<span class="title">QQ</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://weixin.qq.com/" target="_blank">
+									<img alt="微信" src="http://res.wx.qq.com/a/wx_fed/weixin_portal/res/static/img/3wOU-7F.ico">
+									<span class="title">微信</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://dl.xunlei.com/" target="_blank">
+									<img alt="迅雷" src="http://dl.xunlei.com/favicon.ico">
+									<span class="title">迅雷</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://weishi.360.cn/" target="_blank">
+									<img alt="360" src="https://hao.360.cn/favicon.ico">
+									<span class="title">360</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://guanjia.qq.com/" target="_blank">
+									<img alt="腾讯管家" src="https://guanjia.qq.com/favicon.ico">
+									<span class="title">腾讯管家</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://pinyin.sogou.com/" target="_blank">
+									<img alt="搜狗输入法" src="https://pinyin.sogou.com/favicon.ico">
+									<span class="title">搜狗输入法</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">
+									<img alt="谷歌浏览器" src="https://www.google.com/images/icons/product/chrome-32.png">
+									<span class="title">谷歌浏览器</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.firefox.com.cn/" target="_blank">
+									<img alt="火狐浏览器" src="http://www.firefox.com.cn/media/img/firefox/favicon-quantum.e6bb0e59df3d.ico">
+									<span class="title">火狐浏览器</span>
 								</a>
 							</li>
 						</ul>
@@ -146,6 +188,43 @@
 								<a href="https://www.jd.com/" target="_blank">
 									<img alt="京东" src="https://www.jd.com/favicon.ico">
 									<span class="title">京东</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://waimai.meituan.com/" target="_blank">
+									<img alt="美团外卖" src="http://waimai.meituan.com/static/img/favicon_1.ico">
+									<span class="title">美团外卖</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.ele.me/" target="_blank">
+									<img alt="饿了么" src="https://static2.ele.me/eleme/desktop/media/img/favicon-16x16.png">
+									<span class="title">饿了么</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sub-grid1"><!-- 出行 -->
+						<div class="sub-title">
+							<a>出行</a>
+						</div>
+						<ul class="list clearfix">
+							<li>
+								<a href="http://map.baidu.com/" target="_blank">
+									<img alt="百度地图" src="http://map.baidu.com/favicon.ico">
+									<span class="title">百度地图</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.ctrip.com/" target="_blank">
+									<img alt="携程网" src="http://www.ctrip.com/favicon.ico">
+									<span class="title">携程网</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.qunar.com/" target="_blank">
+									<img alt="去哪儿网" src="https://www.qunar.com/favicon.ico">
+									<span class="title">去哪儿网</span>
 								</a>
 							</li>
 						</ul>
