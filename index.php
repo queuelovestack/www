@@ -17,7 +17,7 @@
 				width: 1366px;
 				height: 80%;
 				margin: 0 auto;
-				margin-top: 100px;
+				margin-top: 5%;
 			}
 
 	    	#touchbar {
@@ -237,7 +237,7 @@
 						<ul class="list clearfix">
 							<li>
 								<a href="https://www.csdn.net/" target="_blank">
-									<img alt="CSDN" src="https://csdnimg.cn/public/favicon.ico">
+									<img alt="CSDN" src="./resource/images/ico/csdn_favicon.ico">
 									<span class="title">CSDN</span>
 								</a>
 							</li>
