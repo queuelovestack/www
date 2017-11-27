@@ -19,112 +19,21 @@
 				margin: 0 auto;
 				margin-top: 5%;
 			}
-
-	    	#touchbar {
-	    		width: 100%;
-	    	    height: 65px;
-	    	    position: fixed;
-	    	    top: 0px;
-	    	}
-				
-			.touchbar-container {
-				width: 100%;
-				height: 0px;
-				position: relative;
-			}
-				
-			.touchbar-bg1, .touchbar-bg2, .touchbar-bg3,
-			.touchbar-locked, .touchbar-unlocked {
-				background-image: url(./static/img/touchbar.png);
-				background-repeat: no-repeat;
-			}
-			
-			.touchbar-bg1 {
-		    	height: 53px;
-		    	width: 100%;
-		    	position: absolute;
-				top: 0px;
-	    	    right: 80px;
-	    	    background-position: 0px 0px;
-				background-repeat: repeat;
-		    }
-
-			.touchbar-bg2 {
-				width: 67px;
-				height: 80px;
-				position: absolute;
-				top: -15px;
-	    	    right: 13px;
-	    	    background-position: 0px -46px;
-			}
-
-			.touchbar-bg3 {
-		    	height: 53px;
-		    	width: 13px;
-		    	position: absolute;
-				top: 0px;
-	    	    right: 0px;
-				background-position: 0px 0px;
-		    }
-
-			.touchbar-lock {
-				height: 18px;
-		    	width: 18px;
-				cursor: pointer;
-				position: absolute;
-				top: 55px;
-				left: 33px;
-				z-index: 1;
-			}
-
-		    .touchbar-locked {
-				background-position: -108px -56px;
-		    }
-
-			
-			.touchbar-locked:hover {
-				background-position: -108px -76px;
-		    }
-
-			.touchbar-unlocked {
-				background-position: -88px -56px;
-		    }
-
-		    .touchbar-unlocked:hover {
-		    	background-position: -88px -76px;
-		    }
-
-			.show-bar {
-				-webkit-animation: showbar .2s 0s ease both;
-				   -moz-animation: showbar .2s 0s ease both;
-				    -ms-animation: showbar .2s 0s ease both;
-				     -o-animation: showbar .2s 0s ease both;
-				        animation: showbar .2s 0s ease both;
-			}
-			
-			.hide-bar {
-				-webkit-animation: hidebar .5s 0s ease both;
-				   -moz-animation: hidebar .5s 0s ease both;
-				    -ms-animation: hidebar .5s 0s ease both;
-				     -o-animation: hidebar .5s 0s ease both;
-				        animation: hidebar .5s 0s ease both;
-			}
-
-			@-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
-			@-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
-			@-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
-			@keyframes         showbar { 0% { top: -40px } 100% { top: 0px } }
-
-			@-webkit-keyframes hidebar { 0% { top: 0px } 100% { top: -40px } }
-			@-moz-keyframes    hidebar { 0% { top: 0px } 100% { top: -40px } }
-			@-o-keyframes      hidebar { 0% { top: 0px } 100% { top: -40px } }
-			@keyframes         hidebar { 0% { top: 0px } 100% { top: -40px } }
 	    </style>
 	</head>
 	<body>
 		<div id="touchbar">
 			<div class="touchbar-container">
-			    <div class="touchbar-bg1"></div>
+			    <div class="touchbar-bg1">
+					<div class="touchbar-navbar flexr">
+						<div class="navbar-item navbar-left navbar-item-active">主界面</div>
+						<div class="navbar-item">播放器</div>
+						<div class="navbar-item navbar-right">自定义</div>
+					</div>
+					<div class="nav-container">
+						div.nav-
+					</div>
+			    </div>
 			    <div class="touchbar-bg2">
 				    <div class="touchbar-lock touchbar-locked">
 					</div>
@@ -746,7 +655,8 @@
 	<script src="./resource/js/require.js" defer async="true" data-main="./resource/js/main.js" data-main="js/main"></script>
 	<script>
 		window.onload = function() {
-			
+			/*事件初始化*/
+			this.initEvents();
 		}
 
 		var touchbarLock = document.getElementsByClassName("touchbar-lock")[0];
@@ -784,6 +694,23 @@
 					touchbar.className = "show-bar";
 			},0);
 		} 
+
+		function initEvents() {
+			var navbar = document.getElementsByClassName("navbar-item");
+			for(var i = 0;i < navbar.length;i++) {
+				navbar[i].addEventListener("click", function(e){
+					var el = e.target;
+					for(var j = 0;j < navbar.length;j++) {
+						if(navbar[j].className.indexOf(" navbar-item-active") != -1)
+						   navbar[j].className = navbar[j].className.replace(" navbar-item-active", "");
+						
+						
+					}
+					if(el.className.indexOf(" navbar-item-active") == -1)
+						   el.className = el.className + " navbar-item-active";
+				});
+			}
+		}
 
 		function stopPropagation(e) {
 	        window.event ? window.event.cancelBubble = true : e.stopPropagation();
