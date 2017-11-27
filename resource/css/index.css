@@ -119,3 +119,151 @@ a img {
 .sub-grid1 a .title {
     margin-left: 26px;
 }
+
+#touchbar {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+                
+.touchbar-container {
+    width: 100%;
+    height: 0px;
+    position: relative;
+}
+                
+.touchbar-bg1, .touchbar-bg2, .touchbar-bg3,
+.touchbar-locked, .touchbar-unlocked {
+    background-image: url(../../static/img/touchbar.png);
+    background-repeat: no-repeat;
+}
+            
+.touchbar-bg1 {
+    height: 53px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    right: 80px;
+    background-position: 0px 0px;
+    background-repeat: repeat;
+}
+
+.touchbar-bg2 {
+    width: 67px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    right: 13px;
+    background-position: 0px -46px;
+}
+
+.touchbar-bg3 {
+    height: 53px;
+    width: 13px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-position: 0px 0px;
+}
+
+.touchbar-lock {
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 55px;
+    left: 33px;
+    z-index: 1;
+}
+
+.touchbar-locked {
+    background-position: -108px -56px;
+}
+
+            
+.touchbar-locked:hover {
+    background-position: -108px -76px;
+}
+
+.touchbar-unlocked {
+    background-position: -88px -56px;
+}
+
+.touchbar-unlocked:hover {
+    background-position: -88px -76px;
+}
+
+.show-bar {
+    -webkit-animation: showbar .2s 0s ease both;
+      -moz-animation: showbar .2s 0s ease both;
+        -ms-animation: showbar .2s 0s ease both;
+        -o-animation: showbar .2s 0s ease both;
+            animation: showbar .2s 0s ease both;
+}
+            
+.hide-bar {
+    -webkit-animation: hidebar .5s 0s ease both;
+      -moz-animation: hidebar .5s 0s ease both;
+        -ms-animation: hidebar .5s 0s ease both;
+        -o-animation: hidebar .5s 0s ease both;
+            animation: hidebar .5s 0s ease both;
+}
+            
+.touchbar-navbar {
+    width: 30%;
+    height: 46px;
+    line-height: 2em;
+    margin-left: 120px;
+    font-size: 13px;
+    color: #ddd;
+    cursor: pointer;
+    text-shadow: 0px 0px 15px rgba(200,200,200,.5);
+    font-family: "微软雅黑";
+}
+
+.navbar-item {
+    margin: 7px 0 9px 0;
+    padding: 0 13px;
+    border: solid 1px rgba(200,200,200,.3);
+    box-shadow: 0px 2px 2px rgba(0,0,0,.8),
+    0px -2px 2px rgba(0,0,0,.8),
+    0px 2px 3px rgba(150,150,150,.7) inset,
+    0px -2px 4px rgba(0,0,0,.8) inset;
+}
+
+.navbar-item:hover {
+    color: #eee;
+    text-shadow: 0px 0px 10px rgba(255,255,255,1);
+}
+
+            
+.navbar-item-active {
+    box-shadow: 
+    0px 2px 5px rgba(0,0,0,.8) inset,
+    2px 0px 5px rgba(0,0,0,.8) inset,
+    0px 0px 3px rgba(200,200,200,.8) inset,
+    0px 0px 3px rgba(200,200,200,.8) inset;
+    border: solid 1px #000;
+}
+
+.navbar-left {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.navbar-right {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+@-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
+@-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
+@-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
+@keyframes         showbar { 0% { top: -40px } 100% { top: 0px } }
+
+@-webkit-keyframes hidebar { 0% { top: 0px } 100% { top: -40px } }
+@-moz-keyframes    hidebar { 0% { top: 0px } 100% { top: -40px } }
+@-o-keyframes      hidebar { 0% { top: 0px } 100% { top: -40px } }
+@keyframes         hidebar { 0% { top: 0px } 100% { top: -40px } }
