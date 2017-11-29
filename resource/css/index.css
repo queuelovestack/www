@@ -226,7 +226,7 @@ a img {
 }
             
 .touchbar-navbar {
-    width: 30%;
+    width: 15%;
     height: 46px;
     line-height: 2em;
     margin-left: 120px;
@@ -239,7 +239,8 @@ a img {
 
 .navbar-item {
     margin: 7px 0 9px 0;
-    padding: 0 13px;
+    width: 67px;
+    text-align: center;
     border: solid 1px rgba(200,200,200,.3);
     box-shadow: 0px 2px 2px rgba(0,0,0,.8),
     0px -2px 2px rgba(0,0,0,.8),
@@ -272,6 +273,255 @@ a img {
     border-bottom-right-radius: 3px;
 }
 
+
+.touchbar-navbar-container {
+    width: 80%;
+}
+
+.touchbar-navbar-container-item {
+    height: 46px;
+    line-height: 46px;
+    font-size: 13px;
+    display: none;
+    color: #ddd;
+}
+
+.container-item-active {
+    display: block;
+}
+
+.navbar-list-item {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.navbar-list-item:hover {
+    text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+    -webkit-animation: fontresize .7s 0s ease both;
+      -moz-animation: fontresize .7s 0s ease both;
+        -ms-animation: fontresize .7s 0s ease both;
+        -o-animation: fontresize .7s 0s ease both;
+            animation: fontresize .7s 0s ease both;
+}
+
+.list-item-blur {
+    -webkit-animation: fontrecover .7s 0s ease both;
+      -moz-animation: fontrecover .7s 0s ease both;
+        -ms-animation: fontrecover .7s 0s ease both;
+        -o-animation: fontrecover .7s 0s ease both;
+            animation: fontrecover .7s 0s ease both;
+}
+
+.navbar-list-item:active {
+    -webkit-animation: fontrecover .7s 0s ease both;
+       -moz-animation: fontrecover .7s 0s ease both;
+        -ms-animation: fontrecover .7s 0s ease both;
+         -o-animation: fontrecover .7s 0s ease both;
+            animation: fontrecover .7s 0s ease both;
+}
+
+.padding {
+    border-left: solid 1px #888;
+    padding: 3px 0px 3px 4px;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    width: 200px;
+    height: 2em;
+    padding-left: 20px;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background-color: #222;
+    box-shadow: 0px 0px 5px #fff inset;
+    color: #aaa;
+}
+
+.search-bar-input:focus {
+    -webkit-animation: addwidth 1s 0s ease both;
+       -moz-animation: addwidth 1s 0s ease both;
+        -ms-animation: addwidth 1s 0s ease both;
+         -o-animation: addwidth 1s 0s ease both;
+            animation: addwidth 1s 0s ease both;
+}
+
+.input-blur {
+    -webkit-animation: subwidth 1s 0s ease both;
+       -moz-animation: subwidth 1s 0s ease both;
+        -ms-animation: subwidth 1s 0s ease both;
+         -o-animation: subwidth 1s 0s ease both;
+            animation: subwidth 1s 0s ease both;
+}
+
+.search-bar-button {
+    position: absolute;
+    width: 35px;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border: none;
+    outline: none;
+    height: 23px;
+    right: 2px;
+    top: 11px;
+    background-color: #333;
+    box-shadow: 0px 0px 3px #888;
+    cursor: pointer;
+}
+
+.search-bar-button img{
+    position: absolute;
+    top: 4px;
+    left: 9px;
+}
+
+.search-select {
+    padding-top: 3px;
+    margin-left: 30px;
+    width: 200px;
+    position: relative;
+}
+
+.select1-label,
+.select1-item {
+    background: url(../../static/img/searchIcons.png) no-repeat;
+}
+
+.select1-label-container {
+    width: 86px;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    padding: 2px 8px;
+    margin-right: 10px;
+}
+
+// .select1-label-container:hover {
+//     border: solid 1px #666;
+//     box-shadow: 0px 0px 15px #777 inset;
+// }
+
+.select1-label {
+    width: 86px;
+    height: 32px;
+    background-position: 0 -288px;
+}
+
+.select1-items {
+    position: relative;
+    top: -3px;
+    left: -234px;
+    padding: 0px 8px 1px 8px;
+    background-color: rgba(50,50,50,1);
+    border-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    opacity: 0;
+    cursor: default;
+}
+
+.select1-item-container {
+    margin: 4px 0px 6px 0px;
+    padding: 3px 8px;
+    border: solid 1px #666;
+    border-top: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #111 inset;
+}
+
+.select1-item-container:hover {
+    box-shadow: 0px 0px 15px #777 inset;
+}
+
+.select1-item {
+    width: 86px;
+    height: 32px;
+    background-position: 0 -288px;
+}
+
+
+
+
+
+
+
+
+
+.select2-label-container {
+    width: 32px;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    padding: 2px 8px;
+    margin-right: 40px;
+}
+
+// .select2-label-container:hover {
+//     border: solid 1px #666;
+//     box-shadow: 0px 0px 15px #777 inset;
+// }
+
+.select2-label {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.select2-items {
+    position: relative;
+    top: 1px;
+    left: -217px;
+    padding: 0px 8px 1px 8px;
+    background-color: rgba(50,50,50,1);
+    border-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    opacity: 0;
+    cursor: default;
+}
+
+.select2-item-container {
+    margin: 4px 0px 6px 0px;
+    padding: 2px 8px;
+    border: solid 1px #666;
+    border-top: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #111 inset;
+}
+
+.select2-item-container:hover {
+    box-shadow: 0px 0px 15px #777 inset;
+}
+
+.select2-item {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    background-position: 0 -288px;
+}
+
+.show-select {
+    -webkit-animation: show 1s 0s ease both;
+       -moz-animation: show 1s 0s ease both;
+        -ms-animation: show 1s 0s ease both;
+         -o-animation: show 1s 0s ease both;
+            animation: show 1s 0s ease both;
+}
+
+.hide-select {
+    -webkit-animation: hide 0.5s 0s ease both;
+       -moz-animation: hide 0.5s 0s ease both;
+        -ms-animation: hide 0.5s 0s ease both;
+         -o-animation: hide 0.5s 0s ease both;
+            animation: hide 0.5s 0s ease both;
+}
+
 @-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
 @-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
 @-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
@@ -281,3 +531,33 @@ a img {
 @-moz-keyframes    hidebar { 0% { top: 0px } 100% { top: -40px } }
 @-o-keyframes      hidebar { 0% { top: 0px } 100% { top: -40px } }
 @keyframes         hidebar { 0% { top: 0px } 100% { top: -40px } }
+
+@-webkit-keyframes fontresize { 0% { font-size: 13px } 100% { font-size: 15px } }
+@-moz-keyframes    fontresize { 0% { font-size: 13px } 100% { font-size: 15px } }
+@-o-keyframes      fontresize { 0% { font-size: 13px } 100% { font-size: 15px } }
+@keyframes         fontresize { 0% { font-size: 13px } 100% { font-size: 15px } }
+
+@-webkit-keyframes fontrecover { 0% { font-size: 15px } 100% { font-size: 13px } }
+@-moz-keyframes    fontrecover { 0% { font-size: 15px } 100% { font-size: 13px } }
+@-o-keyframes      fontrecover { 0% { font-size: 15px } 100% { font-size: 13px } }
+@keyframes         fontrecover { 0% { font-size: 15px } 100% { font-size: 13px } }
+
+@-webkit-keyframes addwidth { 0% { width: 200px } 100% { width: 400px } }
+@-moz-keyframes    addwidth { 0% { width: 200px } 100% { width: 400px } }
+@-o-keyframes      addwidth { 0% { width: 200px } 100% { width: 400px } }
+@keyframes         addwidth { 0% { width: 200px } 100% { width: 400px } }
+
+@-webkit-keyframes subwidth { 0% { width: 400px } 100% { width: 200px } }
+@-moz-keyframes    subwidth { 0% { width: 400px } 100% { width: 200px } }
+@-o-keyframes      subwidth { 0% { width: 400px } 100% { width: 200px } }
+@keyframes         subwidth { 0% { width: 400px } 100% { width: 200px } }
+
+@-webkit-keyframes show { 0% { opacity: 0 } 100% { opacity: 1 } }
+@-moz-keyframes    show { 0% { opacity: 0 } 100% { opacity: 1 } }
+@-o-keyframes      show { 0% { opacity: 0 } 100% { opacity: 1 } }
+@keyframes         show { 0% { opacity: 0 } 100% { opacity: 1 } }
+
+@-webkit-keyframes hide { 0% { opacity: 1 } 100% { opacity: 0 } }
+@-moz-keyframes    hide { 0% { opacity: 1 } 100% { opacity: 0 } }
+@-o-keyframes      hide { 0% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes         hide { 0% { opacity: 1 } 100% { opacity: 0 } }
