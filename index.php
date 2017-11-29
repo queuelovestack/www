@@ -42,6 +42,15 @@
 			</div>
 		</div>
 		<div id="home">
+			<div module="wiki" class="m-border-1 m-inner-1" style="height: 363px;">
+				<div class="m-left" style="height: 363px;width: 265px;">
+					<div class="m-title">
+						<div class="t">
+							柯南百科
+						</div>
+					</div>
+				</div>
+			</div>
 			<div module="website" class="m-border-1 m-inner-1" style="height: auto; min-height: 300px;">
 				<div class="sub-grid1-wr">
 					<div class="sub-grid1"><!-- ABCD -->
@@ -170,6 +179,12 @@
 								<a href="http://www.12306.cn/mormhweb/" target="_blank">
 									<img alt="12306" src="http://www.12306.cn/mormhweb/images/favicon.ico">
 									<span class="title">12306</span>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.12308.com/" target="_blank">
+									<img alt="12308" src="http://cdn-resource.12308.com/2015/image/favicon.ico">
+									<span class="title">12308</span>
 								</a>
 							</li>
 							<li>

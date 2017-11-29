@@ -119,7 +119,7 @@ a img {
     position: relative;
 }
 
-.sub-grid1 a img{
+.sub-grid1 a img {
     vertical-align: middle;
     border: none;
     width: 16px;
@@ -131,6 +131,33 @@ a img {
 
 .sub-grid1 a .title {
     margin-left: 26px;
+}
+
+.m-left {
+	overflow: hidden;
+	float: left;
+	position: relative;
+	border-right: 1px solid #e5e5e5;
+}
+
+.m-title {
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    height: 35px;
+    float: left;
+    position: relative;
+	margin:	0 auto;
+}
+
+.m-title .t {
+    font-size: 14px;
+    width: 150px;
+    display: block;
+    float: left;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 35px;
+	text-align: center;
 }
 
 /* write by choker */
