@@ -40,6 +40,8 @@
 								<span class="navbar-list-item fl1">个人中心</span>
 								<span class="padding"></span>
 								<span class="navbar-list-item fl1">扫码关注</span>
+								<span class="padding"></span>
+								<span class="navbar-list-item fl1">分享本站</span>
 							</div>
 							<div class="search-select l flexr vercv">
 								<div class="select1-label-container">
@@ -226,8 +228,8 @@
 							</li>
 							<li>
 								<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">
-									<img alt="谷歌浏览器" src="https://www.google.com/images/icons/product/chrome-32.png">
-									<span class="title">谷歌浏览器</span>
+									<!-- <img alt="谷歌浏览器" src="https://www.google.com/images/icons/product/chrome-32.png">
+									<span class="title">谷歌浏览器</span> -->
 								</a>
 							</li>
 							<li>
@@ -275,8 +277,8 @@
 							</li>
 							<li>
 								<a href="http://waimai.meituan.com/" target="_blank">
-								 	<img alt="美团外卖" src="http://waimai.meituan.com/static/img/favicon_1.ico"> 
-									<span class="title">美团外卖</span>
+								 	<!-- <img alt="美团外卖" src="http://waimai.meituan.com/static/img/favicon_1.ico"> 
+									<span class="title">美团外卖</span> -->
 								</a>
 							</li>
 							<li>
@@ -1150,6 +1152,11 @@
 				if(search.className.indexOf(" input-blur") == -1){
 					search.className = search.className + " input-blur";
 				}
+				setTimeout(function() {
+					if(search.className.indexOf(" input-blur") != -1){
+						search.className = search.className.replace(" input-blur", "");
+					}
+				}, 1000);
 			});
 			//点击站外搜索
 			searchButton.addEventListener("click", function(e) {
@@ -1162,6 +1169,11 @@
 					if(e.target.className.indexOf(" list-item-blur") == -1){
 						e.target.className = e.target.className + " list-item-blur";
 					}
+					setTimeout(function() {
+						if(e.target.className.indexOf(" list-item-blur") != -1){
+							e.target.className = e.target.className.replace(" list-item-blur", "");
+						}
+				}, 1000);
 				});
 				font[i].addEventListener("mouseover", function(e) {
 					if(e.target.className.indexOf(" list-item-blur") != -1){
@@ -1217,11 +1229,18 @@
 					//初次移出 不需要该效果
 					if(options.className.indexOf(" show-select") == -1)
 						return;
-					options.className = options.className + " hide-select";
 				}
 				if(options.className.indexOf(" show-select") != -1){
 					options.className = options.className.replace(" show-select","");
 				}
+				if(options.className.indexOf(" hide-select") == -1){
+					options.className = options.className + " hide-select";
+				}
+				setTimeout(function(){
+					if(options.className.indexOf(" hide-select") != -1){
+						options.className = options.className.replace(" hide-select","");
+					}
+				},1000);
 			}
 			/*载入搜索选项*/
 			var loadSearchOptions = function(index) {
@@ -1271,7 +1290,7 @@
 					});
 				}
 			}
-			/*出事载入 搜网页*/
+			/*初始载入 搜网页*/
 			loadSearchOptions(0);
 			var searchPage = function(keyword, index1, index2) {
 				//xhr
