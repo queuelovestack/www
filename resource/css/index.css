@@ -159,6 +159,36 @@ a img {
     margin: 0 auto;
 }
 
+.m-content {
+    width: 100%;
+    height: 327px;
+    float: left;
+    position: relative;
+}
+
+.knbk-left-bg {
+    background: url(../images/bg/knbk1.png) bottom right no-repeat;
+}
+
+.m-list {
+    width: 244px;
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 8px 5px;
+}
+
+.m-list li {
+	background-position: left top;
+    background-repeat: no-repeat;
+	line-height: 20px;
+}
+
+.m-list .title {
+	padding-left: 20px;
+    display: block;
+}
+
 /* write by choker */
 #touchbar {
     width: 100%;
