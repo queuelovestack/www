@@ -466,9 +466,9 @@ a img {
 }
 
 .select1-items {
-    position: relative;
-    top: -3px;
-    left: -234px;
+    position: absolute;
+    top: -1px;
+    left: -8px;
     padding: 0px 8px 1px 8px;
     background-color: rgba(50,50,50,1);
     border-radius: 7px;
@@ -496,7 +496,7 @@ a img {
 .select1-item {
     width: 86px;
     height: 32px;
-    background-position: 0 -288px;
+    //background-position: 0 -288px;
 }
 
 
@@ -528,9 +528,9 @@ a img {
 }
 
 .select2-items {
-    position: relative;
-    top: 1px;
-    left: -217px;
+    position: absolute;
+    top: 0px;
+    left: 106px;
     padding: 0px 8px 1px 8px;
     background-color: rgba(50,50,50,1);
     border-radius: 7px;
@@ -549,6 +549,7 @@ a img {
     border-top: none;
     border-radius: 5px;
     box-shadow: 0px 0px 15px #111 inset;
+    text-align: center;
 }
 
 .select2-item-container:hover {
@@ -563,11 +564,11 @@ a img {
 }
 
 .show-select {
-    -webkit-animation: show 1s 0s ease both;
-       -moz-animation: show 1s 0s ease both;
-        -ms-animation: show 1s 0s ease both;
-         -o-animation: show 1s 0s ease both;
-            animation: show 1s 0s ease both;
+    -webkit-animation: show 0.5s 0s ease both;
+       -moz-animation: show 0.5s 0s ease both;
+        -ms-animation: show 0.5s 0s ease both;
+         -o-animation: show 0.5s 0s ease both;
+            animation: show 0.5s 0s ease both;
 }
 
 .hide-select {

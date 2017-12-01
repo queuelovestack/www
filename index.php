@@ -40,6 +40,8 @@
 								<span class="navbar-list-item fl1">个人中心</span>
 								<span class="padding"></span>
 								<span class="navbar-list-item fl1">扫码关注</span>
+								<span class="padding"></span>
+								<span class="navbar-list-item fl1">分享本站</span>
 							</div>
 							<div class="search-select l flexr vercv">
 								<div class="select1-label-container">
@@ -52,35 +54,38 @@
 									</div>
 								</div>
 								<div class="select1-items">
-									<div class="select1-item-container">
+									<!-- <div class="select1-item-container">
 										<div class="select1-item">
 										</div>
-									</div>				
-									<div class="select1-item-container">
-										<div class="select1-item">
-										</div>
-									</div>
+									</div> -->
 								</div>
 								<div class="select2-items">
 									<div class="select2-item-container">
-										<div class="select2-item">
-											网页
-										</div>
+										<div class="select2-item">网页</div>
 									</div>
 									<div class="select2-item-container">
-										<div class="select2-item">
-											图片
-										</div>
+										<div class="select2-item">问题</div>
 									</div>
 									<div class="select2-item-container">
-										<div class="select2-item">
-											音乐
-										</div>
+										<div class="select2-item">图片</div>
 									</div>
 									<div class="select2-item-container">
-										<div class="select2-item">
-											问题
-										</div>
+										<div class="select2-item">音乐</div>
+									</div>
+									<div class="select2-item-container">
+										<div class="select2-item">视频</div>
+									</div>
+									<div class="select2-item-container">
+										<div class="select2-item">百科</div>
+									</div>
+									<div class="select2-item-container">
+										<div class="select2-item">社交</div>
+									</div>
+									<div class="select2-item-container">
+										<div class="select2-item">购物</div>
+									</div>
+									<div class="select2-item-container">
+										<div class="select2-item">个性</div>
 									</div>
 								</div>
 							</div>
@@ -231,8 +236,8 @@
 							</li>
 							<li>
 								<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">
-									<img alt="谷歌浏览器" src="https://www.google.com/images/icons/product/chrome-32.png">
-									<span class="title">谷歌浏览器</span>
+									<!-- <img alt="谷歌浏览器" src="https://www.google.com/images/icons/product/chrome-32.png">
+									<span class="title">谷歌浏览器</span> -->
 								</a>
 							</li>
 							<li>
@@ -280,8 +285,8 @@
 							</li>
 							<li>
 								<a href="http://waimai.meituan.com/" target="_blank">
-									<img alt="美团外卖" src="http://waimai.meituan.com/static/img/favicon_1.ico">
-									<span class="title">美团外卖</span>
+								 	<!-- <img alt="美团外卖" src="http://waimai.meituan.com/static/img/favicon_1.ico"> 
+									<span class="title">美团外卖</span> -->
 								</a>
 							</li>
 							<li>
@@ -821,6 +826,256 @@
 	</body>
 	<script src="./resource/js/require.js" defer async="true" data-main="./resource/js/main.js" data-main="js/main"></script>
 	<script>
+		var json = {
+			select: [
+				{
+					index: 0,
+					name: '网页',
+					options: [
+						{
+							index: 0,
+							name: '百度',
+							position: 9,
+							url: 'https://www.baidu.com/s?wd='
+						},{
+							index: 1,
+							name: '谷歌',
+							position: 10,
+							url: 'https://www.google.com.hk/search?newwindow=1&q='
+						},{
+							index: 2,
+							name: '必应',
+							position: 11,
+							url: 'https://cn.bing.com/search?q='
+						},{
+							index: 3,
+							name: '搜狗',
+							position: 12,
+							url: 'http://www.sogou.com/web?query='
+						},{
+							index: 4,
+							name: '360',
+							position: 14,
+							url: 'https://www.so.com/s?q='
+						}
+					]
+				},{
+					index: 1,
+					name: '问题',
+					options: [
+						{
+							index: 0,
+							name: '知乎',
+							position: 8,
+							url: 'https://www.zhihu.com/search?type=content&q='
+						},{
+							index: 1,
+							name: '百度知道',
+							position: 19,
+							url: 'https://zhidao.baidu.com/search?lm=0&rn=10&pn=0&fr=search&ie=gbk&word='
+						}
+					]
+				},{
+					index: 2,
+					name: '图片',
+					options: [
+						{
+							index: 0,
+							name: '百度图片',
+							position: 21,
+							url: 'http://image.baidu.com/search/index?ie=utf-8&tn=baiduimage&word='
+						},{
+							index: 1,
+							name: '谷歌图片',
+							position: 10,
+							url: 'http://images.google.com.hk/images?hl=zh-CN&ie=utf-8&q='
+						},{
+							index: 2,
+							name: '必应图片',
+							position: 11,
+							url: 'http://cn.bing.com/images/search?ie=utf-8&market=zh-cn&q='
+						},{
+							index: 3,
+							name: '搜狗图片',
+							position: 22,
+							url: 'http://pic.sogou.com/pics?query='
+						},{
+							index: 4,
+							name: '360图片',
+							position: 23,
+							url: 'http://image.so.com/i?ie=utf-8&q='
+						}
+					]
+				},{
+					index: 3,
+					name: '音乐',
+					options: [
+						{
+							index: 0,
+							name: '网易云音乐',
+							position: 24,
+							url: 'http://music.163.com/#/search/m/?&s='
+						},{
+							index: 1,
+							name: '百度音乐盒',
+							position: 28,
+							url: 'http://music.baidu.com/search?key='
+						},{
+							index: 2,
+							name: '酷我音乐',
+							position: 27,
+							url: 'http://sou.kuwo.cn/ws/NSearch?type=all&key='
+						},{
+							index: 3,
+							name: '酷狗音乐',
+							position: 26,
+							url: 'http://www.kugou.com/yy/html/search.html#searchType=song&searchKeyWord='
+						},{
+							index: 4,
+							name: 'QQ音乐',
+							position: 25,
+							url: 'https://y.qq.com/portal/search.html#page=1&searchid=1&remoteplace=txt.yqq.top&t=song&w='
+						},{
+							index: 5,
+							name: '虾米音乐',
+							position: 5,
+							url: 'http://www.xiami.com/search?key='
+						}
+					]
+				},{
+					index: 4,
+					name: '视频',
+					options: [
+						{
+							index: 0,
+							name: 'A站',
+							position: 1,
+							url: 'http://www.acfun.cn/search/#query='
+						},{
+							index: 1,
+							name: 'B站',
+							position: 0,
+							url: 'https://search.bilibili.com/all?keyword='
+						},{
+							index: 2,
+							name: '吐槽',
+							position: 2,
+							url: 'http://www.tucao.tv/index.php?m=search&c=index&a=init2&catid=&time=&order=&username=&tag=&q='
+						},{
+							index: 3,
+							name: 'D站',
+							position: 29,
+							url: 'http://www.dilidili.wang/search/index.html?kwtype=0&ie=utf8&src=zz&site=www.dilidili.wang&rg=1&q'
+						},{
+							index: 4,
+							name: '爱奇艺视频',
+							position: 32,
+							url: 'http://so.iqiyi.com/so/q_'
+						},{
+							index: 5,
+							name: '腾讯视频',
+							position: 31,
+							url: 'https://v.qq.com/x/search/?stag=0&smartbox_ab=&q='
+						},{
+							index: 6,
+							name: '优酷',
+							position: 30,
+							url: 'http://www.soku.com/search_video/q_'
+						},{
+							index: 7,
+							name: 'PPTV',
+							position: 33,
+							url: 'http://search.pptv.com/s_video?kw='
+						},{
+							index: 8,
+							name: '搜狐视频',
+							position: 34,
+							url: 'https://so.tv.sohu.com/mts?box=1&wd='
+						},
+					]
+				},{
+					index: 5,
+					name: '百科',
+					options: [
+						{
+							index: 0,
+							name: '萌娘百科',
+							position: 7,
+							url: 'https://zh.moegirl.org/'
+						},{
+							index: 1,
+							name: '维基百科',
+							position: 15,
+							url: 'https://zh.wikipedia.org/w/index.php?search='
+						},{
+							index: 2,
+							name: '百度百科',
+							position: 6,
+							url: 'https://baike.baidu.com/item/'
+						}
+					]
+				},{
+					index: 6,
+					name: '社交',
+					options: [
+						{
+							index: 0,
+							name: '新浪微博',
+							position: 35,
+							url: 'http://s.weibo.com/weibo/'
+						},{
+							index: 1,
+							name: '豆瓣',
+							position: 20,
+							url: 'https://www.douban.com/search?q='
+						},{
+							index: 2,
+							name: '百度贴吧',
+							position: 18,
+							url: 'http://tieba.baidu.com/f?ie=utf-8&fr=search&red_tag=a1909372103&kw='
+						}
+					]
+				},{
+					index: 7,
+					name: '购物',
+					options: [
+						{
+							index: 0,
+							name: '淘宝',
+							position: 36,
+							url: 'https://s.taobao.com/search?q='
+						},{
+							index: 1,
+							name: '京东',
+							position: 37,
+							url: 'https://search.jd.com/Search?enc=utf-8&wq=&keyword='
+						},{
+							index: 2,
+							name: '苏宁',
+							position: 38,
+							url: 'https://search.suning.com/'
+						},{
+							index: 3,
+							name: '亚马逊',
+							position: 39,
+							url: 'https://www.amazon.cn/s/&field-keywords='
+						},
+
+					]
+				},{
+					index: 8,
+					name: '个性',
+					options: [
+						{
+							index: 0,
+							name: '人生05',
+							position: 40,
+							url: 'http://www.rs05.com/search.php?s='
+						}
+					]
+				}
+			]
+		}
 		window.onload = function() {
 			/*事件初始化*/
 			this.initEvents();
@@ -874,7 +1129,9 @@
             var select2Item = document.getElementsByClassName("select2-item");
             var select1Items = document.getElementsByClassName("select1-items")[0];
             var select2Items = document.getElementsByClassName("select2-items")[0];
-
+            var index1 = 0;
+            var index2 = 0;
+            //navbar 点击切换
 			for(var i = 0;i < navbar.length;i++) {
 				navbar[i].addEventListener("click", function(e){
 					var el = e.target;
@@ -893,6 +1150,7 @@
 					}  
 				});
 			}
+			//搜索输入框点击拉伸/缩短
 			search.addEventListener("focus", function(e) {
 				if(search.className.indexOf(" input-blur") != -1){
 					search.className = search.className.replace(" input-blur","");		
@@ -902,15 +1160,28 @@
 				if(search.className.indexOf(" input-blur") == -1){
 					search.className = search.className + " input-blur";
 				}
+				setTimeout(function() {
+					if(search.className.indexOf(" input-blur") != -1){
+						search.className = search.className.replace(" input-blur", "");
+					}
+				}, 1000);
 			});
+			//点击站外搜索
 			searchButton.addEventListener("click", function(e) {
-				console.log(search.value);
+				var keyword = search.value;
+				searchPage(keyword, index1, index2);
 			});
+			//文字放大/缩小
 			for(var i = 0;i < font.length;i++) {
 				font[i].addEventListener("mouseleave", function(e) {
 					if(e.target.className.indexOf(" list-item-blur") == -1){
 						e.target.className = e.target.className + " list-item-blur";
 					}
+					setTimeout(function() {
+						if(e.target.className.indexOf(" list-item-blur") != -1){
+							e.target.className = e.target.className.replace(" list-item-blur", "");
+						}
+				}, 1000);
 				});
 				font[i].addEventListener("mouseover", function(e) {
 					if(e.target.className.indexOf(" list-item-blur") != -1){
@@ -918,14 +1189,7 @@
 					}
 				})
 			}
-			select1Item[0].addEventListener("mouseover", function(e) {
-				stopPropagation(e);
-				showSelect(1);
-			});
-			select1Items.addEventListener("mouseleave", function(e) {
-				stopPropagation(e);
-				hideSelect(1);
-			});
+			//搜索内容下拉框出现/消失	
 			select2Item[0].addEventListener("mouseover", function(e) {
 				stopPropagation(e);
 				showSelect(2);
@@ -934,13 +1198,29 @@
 				stopPropagation(e);
 				hideSelect(2);
 			});
+			//搜索内容选择
 			for(var i = 0;i < select2Item.length;i++) {
 				select2Item[i].addEventListener("click", function(e) {
+					//隐藏状态下点击无效
+					if(select2Items.className.indexOf("hide-select") != -1)
+					   		return;
+					//初始也是隐藏状态
+					else if(select2Items.className.indexOf(" show-select") == -1)
+					   	    return;
 				    hideSelect(2);
-					select2.childNodes[1].innerHTML = e.target.innerHTML;
+				    var el = e.target;
+					select2.childNodes[1].innerHTML = el.innerHTML;
+					for(var j = 0;j < select2Item.length;j++) {
+						if(el == select2Item[j]){
+							index2 = parseInt(j);
+							break;
+						}
+					}
+					//xhr
+					loadSearchOptions(index2);
 				});
 			}
-
+			//显示下拉框
 			var showSelect = function(index) {
 				var options = document.getElementsByClassName("select"+index+"-items")[0];
 				if(options.className.indexOf(" hide-select") != -1){
@@ -950,15 +1230,89 @@
 					options.className = options.className + " show-select";
 				}
 			}
-
+			//隐藏下拉框
 			var hideSelect = function(index) {
 				var options = document.getElementsByClassName("select"+index+"-items")[0];
 				if(options.className.indexOf(" hide-select") == -1){
-					options.className = options.className + " hide-select";
+					//初次移出 不需要该效果
+					if(options.className.indexOf(" show-select") == -1)
+						return;
 				}
 				if(options.className.indexOf(" show-select") != -1){
 					options.className = options.className.replace(" show-select","");
 				}
+				if(options.className.indexOf(" hide-select") == -1){
+					options.className = options.className + " hide-select";
+				}
+				setTimeout(function(){
+					if(options.className.indexOf(" hide-select") != -1){
+						options.className = options.className.replace(" hide-select","");
+					}
+				},1000);
+			}
+			/*载入搜索选项*/
+			var loadSearchOptions = function(index) {
+				//xhr
+				var options = json.select[index].options;
+				select1Items.innerHTML = "";
+				for(var j = 0;j < options.length;j++) {
+					var html = '<div class="select1-item-container">' + 
+									'<div class="select1-item">' + 
+									'</div>' + 
+								'</div>';
+					select1Items.innerHTML += html;
+					var now = document.getElementsByClassName("select1-item")[j];
+					now.style.backgroundPosition = "0 -"+32*options[j].position+"px";
+				}
+				index1 = 0;
+				select1.style.backgroundPosition = "0 -"+32*options[0].position+"px";
+				select1Item = document.getElementsByClassName("select1-item");
+				//搜索平台下拉框出现/消失 
+				select1Item[0].addEventListener("mouseover", function(e) {
+					stopPropagation(e);
+					showSelect(1);
+				});
+				select1Items.addEventListener("mouseleave", function(e) {
+					stopPropagation(e);
+					hideSelect(1);
+				});
+				//搜索平台选择
+				for(var i = 0;i < select1Item.length;i++) {
+					select1Item[i].addEventListener("click", function(e) {
+						//隐藏状态下点击无效
+					   	if(select1Items.className.indexOf(" hide-select") != -1)
+					   		return;
+					   	//初始也是隐藏状态
+					   	else if(select1Items.className.indexOf(" show-select") == -1)
+					   		return;
+					    hideSelect(1);
+					    var el = e.target;
+					    //选中的搜索平台
+						select1.style.backgroundPosition = el.style.backgroundPosition;
+						for(var j = 0;j < select1Item.length;j++) {
+							if(el == select1Item[j]){
+								index1 = parseInt(j);
+								break;
+							}
+						}
+					});
+				}
+			}
+			/*初始载入 搜网页*/
+			loadSearchOptions(0);
+			var searchPage = function(keyword, index1, index2) {
+				//xhr
+				var option = json.select[index2].options[index1];
+				//console.log(index1,index2);
+
+				//console.log(option);
+                var url = option.url + keyword;
+                //特判
+                if(option.name == '京东')
+                	url = "https://search.jd.com/Search?enc=utf-8&wq="+ keyword +"&keyword=" + keyword;
+                else if(option.name == '苏宁')
+                	url += "/";
+                window.open(url);
 			}
 		}
 
@@ -966,9 +1320,9 @@
 	        window.event ? window.event.cancelBubble = true : e.stopPropagation();
 	    }
 
-	     function stopDefault(e) {
+	    function stopDefault(e) {
 	        window.event ? window.event.returnValue = false : e.preventDefault();
-	     }
+	    }
 	</script>
 </html>
 
