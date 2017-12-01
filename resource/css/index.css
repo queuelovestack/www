@@ -167,7 +167,7 @@ a img {
 }
 
 .knbk-left-bg {
-    background: url(../images/bg/knbk1.png) bottom right no-repeat;
+    background: url(../images/knbk/knbk1.png) bottom right no-repeat;
 }
 
 .m-list {
@@ -187,6 +187,11 @@ a img {
 .m-list .title {
 	padding-left: 20px;
     display: block;
+	font-weight: bold;
+}
+
+.m-list .content {
+	line-height: 25px;
 }
 
 /* write by choker */
