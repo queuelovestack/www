@@ -236,8 +236,8 @@
 							</li>
 							<li>
 								<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" target="_blank">
-									<!-- <img alt="谷歌浏览器" src="https://www.google.com/images/icons/product/chrome-32.png">
-									<span class="title">谷歌浏览器</span> -->
+									<img alt="谷歌浏览器" src="./resource/images/ico/www_google_cn_favicon.ico">
+									<span class="title">谷歌浏览器</span>
 								</a>
 							</li>
 							<li>
@@ -285,8 +285,8 @@
 							</li>
 							<li>
 								<a href="http://waimai.meituan.com/" target="_blank">
-								 	<!-- <img alt="美团外卖" src="http://waimai.meituan.com/static/img/favicon_1.ico"> 
-									<span class="title">美团外卖</span> -->
+								 	<img alt="美团外卖" src="./resource/images/ico/waimai_meituan_com_favicon.ico"> 
+									<span class="title">美团外卖</span>
 								</a>
 							</li>
 							<li>
