@@ -124,7 +124,7 @@
 					<div class="m-content knbk-left-bg">
 						<ul class="m-list">
 							<li style="background-image:url(./resource/images/ico/knbk.ico)">
-								<a class="title">柯南百科第一期(2017/12/4~2017/12/10)</a>
+								<a class="title">柯南百科第一期(2017/12/11~2017/12/17)</a>
 								<a class="content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《危命的复活》系列动画第190话中，晚上灰原哀说组织愿意让她回归，但要杀了柯南，于是举起枪对着他，扣下扳机后却只打出了七朵玫瑰。这看似只是个恶趣味玩笑，但其实七朵玫瑰的花语是：偷偷爱着你。</a>
 							</li>
 						</ul>
