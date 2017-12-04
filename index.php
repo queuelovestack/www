@@ -6,6 +6,7 @@
 		<link rel="shortcut icon" href="./favicon.ico">
 	    <link rel="stylesheet" href="./resource/css/lib.CSS">
 		<link rel="stylesheet" type="text/css" href="./resource/css/index.css">
+		<script src="./resource/js/index.js"></script>
 	    <style>
 	    	html,body {
 	    		height: 100%;
@@ -113,7 +114,7 @@
 			</div>
 		</div>
 		<div id="home">
-			<div module="wiki" class="m-border-1 m-inner-1" style="height: 363px;">
+			<div id="wiki" class="m-border-1 m-inner-1" style="height: 363px;">
 				<div class="m-left" style="height: 363px;width: 265px;">
 					<div class="m-title">
 						<div class="t">
@@ -130,7 +131,7 @@
 					</div>
 				</div>
 			</div>
-			<div module="website" class="m-border-1 m-inner-1" style="height: auto; min-height: 300px;">
+			<div id="website" class="m-border-1 m-inner-1" style="height: auto; min-height: 300px;">
 				<div class="sub-grid1-wr">
 					<div class="sub-grid1"><!-- ABCD -->
 						<div class="sub-title">
@@ -824,6 +825,10 @@
 				</div>
 			</div>
 		</div>
+		<ul class="m-jumppod">
+			<li jumpid="wiki" onclick="click_scroll(event);">百科</li>
+			<li jumpid="website" onclick="click_scroll(event);">网址</li>
+		</ul>
 	</body>
 	<script src="./resource/js/require.js" defer async="true" data-main="./resource/js/main.js" data-main="js/main"></script>
 	<script>

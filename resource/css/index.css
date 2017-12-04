@@ -194,6 +194,33 @@ a img {
 	line-height: 25px;
 }
 
+.m-jumppod {
+    font-size: 12px;
+    display: block;
+    position: fixed;
+    zoom: 1;
+    left: 50%;
+    margin-left: 510px;
+    width: 65px;
+    bottom: 100px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+}
+
+.m-jumppod li {
+    text-align: center;
+    cursor: pointer;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+}
+
+.m-jumppod li:hover {
+    background: #eee;
+}
+
 /* write by choker */
 #touchbar {
     width: 100%;
