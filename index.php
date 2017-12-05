@@ -1079,8 +1079,12 @@
 							name: '亚马逊',
 							position: 39,
 							url: 'https://www.amazon.cn/s/&field-keywords='
+						},{
+							index: 4,
+							name: '网易严选',
+							position: 41,
+							url: 'http://you.163.com/search?keyword='
 						},
-
 					]
 				},{
 					index: 8,
