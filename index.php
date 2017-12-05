@@ -126,6 +126,14 @@
 							</div>
 						</a>
 					</li>
+					<li class="item">
+						<a target="_blank" href="http://www.youku.com/">
+							<img alt="优酷" src="./resource/images/navigation/videoyouku.png" width="54" height="54">
+							<div class="title">
+								<span>优酷</span>
+							</div>
+						</a>
+					</li>
 				</ul>
 			</div>
 			<div id="wiki" class="m-border-1 m-inner-1" style="height: 363px;">
