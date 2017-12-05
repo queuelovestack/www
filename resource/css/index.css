@@ -221,6 +221,100 @@ a img {
     background: #eee;
 }
 
+.web-bg .icon-clip, .web-bg .icon-dot {
+	background-image: url(../../static/img/icon.png);
+}
+
+.web-bg {
+    position: relative;
+	margin: 0 auto 15px;
+    width: 1000px;
+    height: 170px;
+    background-color: rgba(255,255,255,.75);
+    border-radius: 5px;
+	padding-top: 22px;
+}
+
+.web-bg .icon-clip {
+	background-position: -247px -71px;
+}
+
+.web-bg .icon-clip {
+    position: absolute;
+    width: 33px;
+    height: 37px;
+    top: -15px;
+    left: 8px;
+    background-repeat: no-repeat;
+}
+
+.web-bg .icon-dot {
+    background-position: -270px -118px;
+}
+
+.web-bg .icon-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 7px;
+    right: 7px;
+    background-repeat: no-repeat;
+}
+
+.m-shortcut-panel {
+    float: left;
+    position: relative;
+    width: 990px;
+    margin-left: 4px;
+    display: block;
+}
+
+.m-shortcut-panel .item {
+    margin: 0 5px;
+    width: 80px;
+    float: left;
+    display: block;
+}
+
+.m-shortcut-panel .item a {
+    overflow: hidden;
+    display: block;
+    width: 80px;
+    height: 85px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+	border: 1px solid rgba(255,255,255,.75);
+}
+
+.m-shortcut-panel .item a:hover {
+    color: white;
+	border-color: rgba(0,0,0,.75);
+    text-decoration: none;
+    background: url(../images/navigation/bggray.png);
+}
+
+.m-shortcut-panel .item img {
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    width: 54px;
+    height: 54px;
+}
+
+.m-shortcut-panel .item .title {
+    text-align: center;
+    display: block;
+    margin: 3px auto 0;
+    line-height: 25px;
+    height: 25px;
+    font-size: 13px;
+    width: 100%;
+    border-radius: 4px;
+}
+
 /* write by choker */
 #touchbar {
     width: 100%;

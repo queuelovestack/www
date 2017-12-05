@@ -114,6 +114,20 @@
 			</div>
 		</div>
 		<div id="home">
+			<div class="web-bg">
+				<span class="icon-clip"></span>
+				<span class="icon-dot"></span>
+				<ul class="m-shortcut-panel clearfix">
+					<li class="item">
+						<a target="_blank" href="http://music.163.com/">
+							<img alt="网易云音乐" src="./resource/images/navigation/music163.png" width="54" height="54">
+							<div class="title">
+								<span>网易云音乐</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
 			<div id="wiki" class="m-border-1 m-inner-1" style="height: 363px;">
 				<div class="m-left" style="height: 363px;width: 265px;">
 					<div class="m-title">
