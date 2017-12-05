@@ -1222,7 +1222,7 @@
 				})
 			}
 			//搜索内容下拉框出现/消失	
-			select2Item[0].addEventListener("mouseover", function(e) {
+			select2.addEventListener("mouseover", function(e) {
 				stopPropagation(e);
 				showSelect(2);
 			});
@@ -1260,6 +1260,7 @@
 				}
 				if(options.className.indexOf(" show-select") == -1){
 					options.className = options.className + " show-select";
+					options.style.display = "block";
 				}
 			}
 			//隐藏下拉框
@@ -1275,6 +1276,8 @@
 				}
 				if(options.className.indexOf(" hide-select") == -1){
 					options.className = options.className + " hide-select";
+					setTimeout(function(){options.style.display = "none";},700);
+					
 				}
 				setTimeout(function(){
 					if(options.className.indexOf(" hide-select") != -1){
@@ -1300,7 +1303,7 @@
 				select1.style.backgroundPosition = "0 -"+32*options[0].position+"px";
 				select1Item = document.getElementsByClassName("select1-item");
 				//搜索平台下拉框出现/消失 
-				select1Item[0].addEventListener("mouseover", function(e) {
+				select1.addEventListener("mouseover", function(e) {
 					stopPropagation(e);
 					showSelect(1);
 				});
