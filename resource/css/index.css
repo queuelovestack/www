@@ -604,6 +604,7 @@ a img {
     border-top-right-radius: 4px;
     opacity: 0;
     cursor: default;
+    display: none;
 }
 
 .select1-item-container {
@@ -666,6 +667,7 @@ a img {
     border-top-right-radius: 4px;
     opacity: 0;
     cursor: default;
+    display: none;
 }
 
 .select2-item-container {
@@ -690,19 +692,19 @@ a img {
 }
 
 .show-select {
-    -webkit-animation: show 0.5s 0s ease both;
-       -moz-animation: show 0.5s 0s ease both;
-        -ms-animation: show 0.5s 0s ease both;
-         -o-animation: show 0.5s 0s ease both;
-            animation: show 0.5s 0s ease both;
+    -webkit-animation: show 0.7s 0s ease both;
+       -moz-animation: show 0.7s 0s ease both;
+        -ms-animation: show 0.7s 0s ease both;
+         -o-animation: show 0.7s 0s ease both;
+            animation: show 0.7s 0s ease both;
 }
 
 .hide-select {
-    -webkit-animation: hide 0.5s 0s ease both;
-       -moz-animation: hide 0.5s 0s ease both;
-        -ms-animation: hide 0.5s 0s ease both;
-         -o-animation: hide 0.5s 0s ease both;
-            animation: hide 0.5s 0s ease both;
+    -webkit-animation: hide 0.7s 0s ease both;
+       -moz-animation: hide 0.7s 0s ease both;
+        -ms-animation: hide 0.7s 0s ease both;
+         -o-animation: hide 0.7s 0s ease both;
+            animation: hide 0.7s 0s ease both;
 }
 
 @-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
@@ -740,7 +742,7 @@ a img {
 @-o-keyframes      show { 0% { opacity: 0 } 100% { opacity: 1 } }
 @keyframes         show { 0% { opacity: 0 } 100% { opacity: 1 } }
 
-@-webkit-keyframes hide { 0% { opacity: 1 } 100% { opacity: 0 } }
-@-moz-keyframes    hide { 0% { opacity: 1 } 100% { opacity: 0 } }
-@-o-keyframes      hide { 0% { opacity: 1 } 100% { opacity: 0 } }
-@keyframes         hide { 0% { opacity: 1 } 100% { opacity: 0 } }
+@-webkit-keyframes hide { 0% { opacity: 1 } 100% { opacity: 0; } }
+@-moz-keyframes    hide { 0% { opacity: 1 } 100% { opacity: 0; } }
+@-o-keyframes      hide { 0% { opacity: 1 } 100% { opacity: 0; } }
+@keyframes         hide { 0% { opacity: 1 } 100% { opacity: 0; } }
