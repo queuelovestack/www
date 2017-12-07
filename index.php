@@ -118,7 +118,39 @@
 				<span class="icon-clip"></span>
 				<span class="icon-dot"></span>
 				<ul class="m-shortcut-panel clearfix">
-					<li class="item">
+					<li class="item"><!-- 微博 -->
+						<a target="_blank" href="https://weibo.com/">
+							<img alt="微博" src="./resource/images/navigation/weibo.png" width="54" height="54">
+							<div class="title">
+								<span>微博</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 新闻 -->
+						<a target="_blank" href="http://news.163.com/">
+							<img alt="网易新闻" src="./resource/images/navigation/news163.png" width="54" height="54">
+							<div class="title">
+								<span>网易新闻</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 购物 -->
+						<a target="_blank" href="https://www.taobao.com/">
+							<img alt="淘宝网" src="./resource/images/navigation/shopping.png" width="54" height="54">
+							<div class="title">
+								<span>淘宝网</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 视频 -->
+						<a target="_blank" href="http://www.youku.com/">
+							<img alt="优酷视频" src="./resource/images/navigation/videoyouku.png" width="54" height="54">
+							<div class="title">
+								<span>优酷视频</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 音乐 -->
 						<a target="_blank" href="http://music.163.com/">
 							<img alt="网易云音乐" src="./resource/images/navigation/music163.png" width="54" height="54">
 							<div class="title">
@@ -126,11 +158,51 @@
 							</div>
 						</a>
 					</li>
-					<li class="item">
-						<a target="_blank" href="http://www.youku.com/">
-							<img alt="优酷" src="./resource/images/navigation/videoyouku.png" width="54" height="54">
+					<li class="item"><!-- 知乎 -->
+						<a target="_blank" href="https://www.zhihu.com/explore">
+							<img alt="知乎" src="./resource/images/navigation/zhihu.png" width="54" height="54">
 							<div class="title">
-								<span>优酷</span>
+								<span>知乎</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 创作 -->
+						<a target="_blank" href="http://www.jianshu.com/">
+							<img alt="简书" src="./resource/images/navigation/jianshu.png" width="54" height="54">
+							<div class="title">
+								<span>简书</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 阅读 -->
+						<a target="_blank" href="https://www.qidian.com/">
+							<img alt="起点中文网" src="./resource/images/navigation/read.png" width="54" height="54">
+							<div class="title">
+								<span>起点中文网</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 游戏 -->
+						<a target="_blank" href="http://game.qq.com/">
+							<img alt="腾讯游戏" src="./resource/images/navigation/gameqq.png" width="54" height="54">
+							<div class="title">
+								<span>腾讯游戏</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 漫画 -->
+						<a target="_blank" href="http://baozoumanhua.com/">
+							<img alt="暴走漫画" src="./resource/images/navigation/caricature.png" width="54" height="54">
+							<div class="title">
+								<span>暴走漫画</span>
+							</div>
+						</a>
+					</li>
+					<li class="item"><!-- 直播 -->
+						<a target="_blank" href="https://www.douyu.com/">
+							<img alt="斗鱼" src="./resource/images/navigation/tvdouyu.png" width="54" height="54">
+							<div class="title">
+								<span>斗鱼</span>
 							</div>
 						</a>
 					</li>
