@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
-/* write by queuelovestack */
+/**** write by queuelovestack ****/
 html, body, h1, h2, h3, h4, h5, h6, hr, p, a,
 blockquote, dl, dt, dd, ul, ol, li, pre,
 form, fieldset, legend, button, input, textarea, th, td {
     margin: 0;
     padding: 0;
+}
+
+.code-font {
+	font-family: "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas", "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace;
 }
 
 .clear {
@@ -60,6 +64,17 @@ a img {
 	margin: 0 auto 15px;
 	border-radius: 2px;
 	overflow: hidden;
+}
+
+.m-background {
+	position: absolute;
+    zoom: 1;
+    width: 100%;
+    height: 800px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent top center no-repeat;
 }
 
 .sub-grid1-wr {
@@ -204,24 +219,49 @@ a img {
     width: 65px;
     bottom: 100px;
     text-align: center;
-    border: 1px solid #e5e5e5;
-    border-bottom: none;
 }
 
 .m-jumppod li {
-    text-align: center;
-    cursor: pointer;
+	text-align: center;
+	cursor: pointer;
     height: 35px;
-    line-height: 35px;
+	line-height: 35px;
+}
+
+.m-jumppod .totop, .m-jumppod .tobottom {
+	text-indent: -1000em;
+}
+
+.m-jumppod .totop {
+	background-position: -215px -2148px;
+	background-repeat: no-repeat;
+}
+
+.m-jumppod .totop:hover {
+	background-position: -215px -2202px;
+}
+
+.m-jumppod .towhere {
     border-bottom: 1px solid #ddd;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
     color: #666;
 }
 
-.m-jumppod li:hover {
+.m-jumppod .towhere:hover {
     background: #eee;
 }
 
-.web-bg .icon-clip, .web-bg .icon-dot {
+.m-jumppod .tobottom {
+	background-position: -215px -2254px;
+	background-repeat: no-repeat;
+}
+
+.m-jumppod .tobottom:hover {
+	background-position: -215px -2308px;
+}
+
+.web-bg .icon-clip, .web-bg .icon-dot, .m-jumppod .totop, .m-jumppod .tobottom {
 	background-image: url(../../static/img/icon.png);
 }
 
@@ -230,7 +270,7 @@ a img {
 	margin: 0 auto 15px;
     width: 1000px;
     height: 170px;
-    background-color: rgba(255,255,255,.75);
+    background-color: rgba(255,255,255,.65);
     border-radius: 5px;
 	padding-top: 22px;
 }
@@ -261,8 +301,43 @@ a img {
     background-repeat: no-repeat;
 }
 
-.m-shortcut-panel {
+.web-bg .custom-wrap {
+    width: 958px;
+    height: 46px;
+    margin: 20px auto 0;
+    border-top: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.web-bg .custom-wrap .custom-list {
+    height: 46px;
+    margin-left: 44px;
+}
+
+.web-bg .custom-wrap .custom-list li {
     float: left;
+}
+
+.web-bg .custom-wrap .custom-list li a {
+    display: block;
+    width: 120px;
+    height: 46px;
+    line-height: 46px;
+}
+
+.web-bg .custom-wrap .custom-list li a img {
+	float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: 14px;
+}
+
+.web-bg .custom-wrap .custom-list li a .title {
+    margin-left: 10px;
+}
+
+.m-shortcut-panel {
     position: relative;
     width: 990px;
     margin-left: 4px;
@@ -286,7 +361,7 @@ a img {
     padding-bottom: 0;
     margin: 0 auto;
     text-align: center;
-	border: 1px solid rgba(255,255,255,.75);
+	border: 1px solid rgba(255,255,255,.15);
 }
 
 .m-shortcut-panel .item a:hover {
@@ -315,7 +390,88 @@ a img {
     border-radius: 4px;
 }
 
-/* write by choker */
+#floatleft-notice {
+	background: #f7f7f7;
+	position: fixed;
+    left: 50%;
+    bottom: 25px;
+	width: 270px;
+	height: 300px;
+    margin-left: -780px;
+}
+
+#floatleft-count {
+    position: fixed;
+    left: 50%;
+    bottom: 330px;
+    margin-left: -720px;
+}
+
+#floatleft-notice .panel-head {
+	background: #f2f2f2;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 11px;
+    color: #333;
+	font-weight: bold;
+}
+
+#floatleft-notice .panel-body {
+	padding: 15px 16px 17px;
+    word-break: break-all;
+	bottom: 0;
+	position: absolute;
+}
+
+#floatleft-notice .panel-body a {
+	color: #c88326;
+}
+
+#floatleft-notice .panel-body a:hover {
+	color: #e63;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.m-footer .line {
+	margin-top: 15px;
+}
+
+.m-footer .infor {
+	display: block;
+}
+
+.m-footer .infor li {
+	border-left: 1px solid #aaa;
+    padding: 0 10px;
+    float: left;
+    height: 16px;
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+.m-footer .infor li.firstchild {
+	border-left: none;
+}
+
+.m-footer .infor a {
+	color: #888;
+}
+
+.m-footer .over {
+	width: 100%;
+    display: block;
+    float: left;
+    margin-top: 20px;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/**** write by choker ****/
 #touchbar {
     width: 100%;
     height: 65px;

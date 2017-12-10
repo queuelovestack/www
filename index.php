@@ -19,7 +19,7 @@
 				width: 1366px;
 				height: 80%;
 				margin: 0 auto;
-				margin-top: 5%;
+				margin-top: 17%;
 			}
 	    </style>
 	</head>
@@ -112,6 +112,8 @@
 			    </div>
 			    <div class="touchbar-bg3"></div>
 			</div>
+		</div>
+		<div id="top" class="m-background" style="display: block; background-image: url(./static/bg/bg1.jpg);">
 		</div>
 		<div id="home">
 			<div class="web-bg">
@@ -207,6 +209,52 @@
 						</a>
 					</li>
 				</ul>
+				<div class="custom-wrap">
+					<ul class="custom-list">
+						<li>
+							<a href="https://tieba.baidu.com/" target="_blank">
+								<img alt="百度贴吧" src="./resource/images/navigation/tieba.ico">
+								<span class="title">贴&nbsp;吧</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://qzone.qq.com/" target="_blank">
+								<img alt="QQ空间" src="./resource/images/navigation/qzone.ico">
+								<span class="title">Qzone</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.renren.com/" target="_blank">
+								<img alt="人人网" src="./resource/images/navigation/renren.ico">
+								<span class="title">人&nbsp;人</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.douban.com/" target="_blank">
+								<img alt="豆瓣" src="./resource/images/navigation/douban.ico">
+								<span class="title">豆&nbsp;瓣</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.4399.com/" target="_blank">
+								<img alt="4399" src="./resource/images/navigation/4399.ico">
+								<span class="title">4399</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/" target="_blank">
+								<img alt="GitHub" src="./resource/images/navigation/github.ico">
+								<span class="title">GitHub</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://mail.qq.com/" target="_blank">
+								<img alt="QQ邮箱" src="./resource/images/navigation/email.ico">
+								<span class="title">邮&nbsp;箱</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div id="wiki" class="m-border-1 m-inner-1" style="height: 363px;">
 				<div class="m-left" style="height: 363px;width: 265px;">
@@ -218,7 +266,7 @@
 					<div class="m-content knbk-left-bg">
 						<ul class="m-list">
 							<li style="background-image:url(./resource/images/ico/knbk.ico)">
-								<a class="title">柯南百科第一期(2017/12/11~2017/12/17)</a>
+								<a class="title">柯南百科第一期(2018/01/01~2017/01/07)</a>
 								<a class="content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《危命的复活》系列动画第190话中，晚上灰原哀说组织愿意让她回归，但要杀了柯南，于是举起枪对着他，扣下扳机后却只打出了七朵玫瑰。这看似只是个恶趣味玩笑，但其实七朵玫瑰的花语是：偷偷爱着你。</a>
 							</li>
 						</ul>
@@ -918,11 +966,63 @@
 					</div>
 				</div>
 			</div>
+			<div id="bottom" class="m-inner-1 m-footer" style="border-top: 1px dashed #cecece;">
+				<div class="line">
+					<ul class="infor">
+						<li class="firstchild">
+							<a>关于我们</a>
+						</li>
+						<li>
+							<a>反馈意见</a>
+						</li>
+					</ul>
+					<span class="over">暖导航 - 你的贴心小棉袄？！</span>
+				</div>
+			</div>
 		</div>
 		<ul class="m-jumppod">
-			<li jumpid="wiki" onclick="click_scroll(event);">百科</li>
-			<li jumpid="website" onclick="click_scroll(event);">网址</li>
+			<li jumpid="top" class="totop" onclick="click_scroll(event);">回到顶部</li>
+			<li jumpid="wiki" class="towhere" onclick="click_scroll(event);">百科</li>
+			<li jumpid="website" class="towhere" onclick="click_scroll(event);">网址</li>
+			<li jumpid="bottom" class="tobottom" onclick="click_scroll(event);">直达底部</li>
 		</ul>
+		<div id="floatleft-notice" class="m-border-1">
+			<ul class="panel-head">
+				<span>站点通知</span>
+			</ul>
+			<ul class="panel-body">
+				<marquee>
+					<font color="#FF0000">
+						<b>
+							<a>
+								<img src="./resource/images/floatleft/bg_pre.gif" style="width: 8%;">
+								欢迎大家使用暖导航！希望能够给我们多多提意见！
+								<img src="./resource/images/floatleft/bg_next.gif" style="width: 8%;">
+							</a>
+						</b>
+					</font>
+				</marquee>
+				<br/>
+				<br/>
+				<div align="right">
+					<font color="#FF0000">
+						<b>2018-01-01</b>
+					</font>
+				</div>
+				<br/>
+				<b>-----------------------------------------------------------</b>
+				<br/>
+				<br/>
+				<div align="center">
+					<img src="./resource/images/floatleft/chuyin.gif" style="width: 50%;">
+				</div>
+			</ul>
+		</div>
+		<div id="floatleft-count">
+			<a href="https://info.flagcounter.com/hAqs" target="_blank">
+				<img src="https://s01.flagcounter.com/count2/hAqs/bg_F7F7F7/txt_000000/border_CCCCCC/columns_2/maxflags_20/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Free counters!" border="0">
+			</a>
+		</div>
 	</body>
 	<script src="./resource/js/require.js" defer async="true" data-main="./resource/js/main.js" data-main="js/main"></script>
 	<script>
