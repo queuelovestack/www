@@ -281,6 +281,27 @@
 						</ul>
 					</div>
 				</div>
+				<div class="m-right">
+					<div class="right-inner">
+
+					<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjMzMy84ODk0">
+					<script type="text/javascript">
+						(function(d, s) {
+							var j, e = d.getElementsByTagName(s)[0];
+	
+							if (typeof LivereTower === 'function') { return; }
+
+							j = d.createElement(s);
+							j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+							j.async = true;
+
+							e.parentNode.insertBefore(j, e);
+						})(document, 'script');
+					</script>
+					<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+					</div>
+				  </div>
+				</div>
 			</div>
 			<div id="website" class="m-border-1 m-inner-1" style="height: auto; min-height: 300px;">
 				<div class="sub-grid1-wr">
@@ -1291,6 +1312,7 @@
 		}
 		window.onload = function() {
 			/*事件初始化*/
+				
 			this.initEvents();
 		}
 

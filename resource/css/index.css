@@ -863,6 +863,20 @@ a img {
             animation: hide 0.7s 0s ease both;
 }
 
+.m-right {
+    overflow: hidden;
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 712px;
+}
+
+.right-inner {
+    overflow-y: scroll;
+    width: 732px;
+    height: 100%;
+}
+
 @-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
 @-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
 @-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
