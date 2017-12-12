@@ -1313,6 +1313,7 @@
 		}
 		window.onload = function() {
 			/*事件初始化*/
+				
 			this.initEvents();
 		}
 

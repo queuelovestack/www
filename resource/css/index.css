@@ -157,7 +157,7 @@ a img {
 
 .m-right {
 	overflow: hidden;
-	float: right;
+	float: left;
 	position: relative;
 }
 
