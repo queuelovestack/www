@@ -1,3 +1,8 @@
+<?php
+	define("temp_path", "http://xiaohquan.oss-cn-hangzhou.aliyuncs.com/");
+	define("spare_path", "./");
+	define("img_type", 1);//type:1.oss,2.weibo,3.local
+?>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -103,7 +108,7 @@
 							<div class="search-bar l">
 								<input class="search-bar-input" type="text" placeholder="搜搜你想要的 (>▽<)">
 								<button type="submit" class="search-bar-button">
-									<img data-src="./static/img/search.png" width="15" height="15">
+									<img data-src="<?=temp_path?>static/img/search.png" width="15" height="15">
 								</button>
 							</div>
 						</div>
@@ -122,7 +127,19 @@
 			    <div class="touchbar-bg3"></div>
 			</div>
 		</div>
-		<div id="top" class="m-background" style="display: block; background-image: url(./static/bg/bg1.jpg);">
+		<div id="top" class="m-background" style="display: block; background-image: url(<?php
+			switch (img_type) {
+				case 1:
+					echo temp_path . 'static/bg/bg1.jpg';
+					break;
+				case 2:
+					echo 'http://wx4.sinaimg.cn/large/e4fb1887gy1fmf9mpaofij20xc0egdom.jpg';
+					break;
+				case 3:
+					echo spare_path . 'static/bg/bg1.jpg';
+					break;
+			}
+		?>);">
 		</div>
 		<div id="home">
 			<div class="web-bg">
@@ -131,7 +148,19 @@
 				<ul class="m-shortcut-panel clearfix">
 					<li class="item"><!-- 微博 -->
 						<a target="_blank" href="https://weibo.com/">
-							<img alt="微博" data-src="./resource/images/navigation/weibo.png" width="54" height="54">
+							<img alt="微博" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/weibo.png';
+										break;
+									case 2:
+										echo 'http://wx3.sinaimg.cn/large/e4fb1887gy1fmf9ysudp4j209g09gwfx.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/weibo.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>微博</span>
 							</div>
@@ -139,7 +168,19 @@
 					</li>
 					<li class="item"><!-- 新闻 -->
 						<a target="_blank" href="http://news.163.com/">
-							<img alt="网易新闻" data-src="./resource/images/navigation/news163.png" width="54" height="54">
+							<img alt="网易新闻" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/news163.png';
+										break;
+									case 2:
+										echo 'http://wx4.sinaimg.cn/large/e4fb1887gy1fmf9yqc6yej203g03g3yt.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/news163.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>网易新闻</span>
 							</div>
@@ -147,7 +188,19 @@
 					</li>
 					<li class="item"><!-- 购物 -->
 						<a target="_blank" href="https://www.taobao.com/">
-							<img alt="淘宝网" data-src="./resource/images/navigation/shopping.png" width="54" height="54">
+							<img alt="淘宝网" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/shopping.png';
+										break;
+									case 2:
+										echo 'http://wx2.sinaimg.cn/large/e4fb1887gy1fmf9yrlg4kj208c08cgph.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/shopping.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>淘宝网</span>
 							</div>
@@ -155,7 +208,19 @@
 					</li>
 					<li class="item"><!-- 视频 -->
 						<a target="_blank" href="http://www.youku.com/">
-							<img alt="优酷视频" data-src="./resource/images/navigation/videoyouku.png" width="54" height="54">
+							<img alt="优酷视频" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/videoyouku.png';
+										break;
+									case 2:
+										echo 'http://wx1.sinaimg.cn/large/e4fb1887gy1fmf9ysftm7j20dx0dx76d.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/videoyouku.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>优酷视频</span>
 							</div>
@@ -163,7 +228,19 @@
 					</li>
 					<li class="item"><!-- 音乐 -->
 						<a target="_blank" href="http://music.163.com/">
-							<img alt="网易云音乐" data-src="./resource/images/navigation/music163.png" width="54" height="54">
+							<img alt="网易云音乐" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/music163.png';
+										break;
+									case 2:
+										echo 'http://wx4.sinaimg.cn/large/e4fb1887gy1fmf9yptcqpj201k01ka9x.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/music163.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>网易云音乐</span>
 							</div>
@@ -171,7 +248,19 @@
 					</li>
 					<li class="item"><!-- 知乎 -->
 						<a target="_blank" href="https://www.zhihu.com/explore">
-							<img alt="知乎" data-src="./resource/images/navigation/zhihu.png" width="54" height="54">
+							<img alt="知乎" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/zhihu.png';
+										break;
+									case 2:
+										echo 'http://wx2.sinaimg.cn/large/e4fb1887gy1fmf9ytaleaj20a50a5q3x.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/zhihu.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>知乎</span>
 							</div>
@@ -179,7 +268,19 @@
 					</li>
 					<li class="item"><!-- 创作 -->
 						<a target="_blank" href="http://www.jianshu.com/">
-							<img alt="简书" data-src="./resource/images/navigation/jianshu.png" width="54" height="54">
+							<img alt="简书" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/jianshu.png';
+										break;
+									case 2:
+										echo 'http://wx1.sinaimg.cn/large/e4fb1887gy1fmf9yphbvrj20fk0fkacd.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/jianshu.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>简书</span>
 							</div>
@@ -187,7 +288,19 @@
 					</li>
 					<li class="item"><!-- 阅读 -->
 						<a target="_blank" href="https://www.qidian.com/">
-							<img alt="起点中文网" data-src="./resource/images/navigation/read.png" width="54" height="54">
+							<img alt="起点中文网" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/read.png';
+										break;
+									case 2:
+										echo 'http://wx2.sinaimg.cn/large/e4fb1887gy1fmf9yqwh66j20jm0jmq47.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/read.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>起点中文网</span>
 							</div>
@@ -195,7 +308,19 @@
 					</li>
 					<li class="item"><!-- 游戏 -->
 						<a target="_blank" href="http://game.qq.com/">
-							<img alt="腾讯游戏" data-src="./resource/images/navigation/gameqq.png" width="54" height="54">
+							<img alt="腾讯游戏" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/gameqq.png';
+										break;
+									case 2:
+										echo 'http://wx4.sinaimg.cn/large/e4fb1887gy1fmf9yoz3l1j20ae0aeq5s.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/gameqq.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>腾讯游戏</span>
 							</div>
@@ -203,7 +328,19 @@
 					</li>
 					<li class="item"><!-- 漫画 -->
 						<a target="_blank" href="http://baozoumanhua.com/">
-							<img alt="暴走漫画" data-src="./resource/images/navigation/caricature.png" width="54" height="54">
+							<img alt="暴走漫画" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/caricature.png';
+										break;
+									case 2:
+										echo 'http://wx1.sinaimg.cn/large/e4fb1887gy1fmf9yogtezj208c08cq3c.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/caricature.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>暴走漫画</span>
 							</div>
@@ -211,7 +348,19 @@
 					</li>
 					<li class="item"><!-- 直播 -->
 						<a target="_blank" href="https://www.douyu.com/">
-							<img alt="斗鱼" data-src="./resource/images/navigation/tvdouyu.png" width="54" height="54">
+							<img alt="斗鱼" data-src="<?php
+								switch (img_type) {
+									case 1:
+										echo temp_path . 'resource/images/navigation/tvdouyu.png';
+										break;
+									case 2:
+										echo 'http://wx2.sinaimg.cn/large/e4fb1887gy1fmf9ys00u5j203w03wt8q.jpg';
+										break;
+									case 3:
+										echo spare_path . 'resource/images/navigation/tvdouyu.png';
+										break;
+								}
+							?>" width="54" height="54">
 							<div class="title">
 								<span>斗鱼</span>
 							</div>
@@ -222,43 +371,43 @@
 					<ul class="custom-list">
 						<li>
 							<a href="https://tieba.baidu.com/" target="_blank">
-								<img alt="百度贴吧" data-src="./resource/images/navigation/tieba.ico">
+								<img alt="百度贴吧" data-src="<?=temp_path?>resource/images/navigation/tieba.ico">
 								<span class="title">贴&nbsp;吧</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://qzone.qq.com/" target="_blank">
-								<img alt="QQ空间" data-src="./resource/images/navigation/qzone.ico">
+								<img alt="QQ空间" data-src="<?=temp_path?>resource/images/navigation/qzone.ico">
 								<span class="title">Qzone</span>
 							</a>
 						</li>
 						<li>
 							<a href="http://www.renren.com/" target="_blank">
-								<img alt="人人网" data-src="./resource/images/navigation/renren.ico">
+								<img alt="人人网" data-src="<?=temp_path?>resource/images/navigation/renren.ico">
 								<span class="title">人&nbsp;人</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://www.douban.com/" target="_blank">
-								<img alt="豆瓣" data-src="./resource/images/navigation/douban.ico">
+								<img alt="豆瓣" data-src="<?=temp_path?>resource/images/navigation/douban.ico">
 								<span class="title">豆&nbsp;瓣</span>
 							</a>
 						</li>
 						<li>
 							<a href="http://www.4399.com/" target="_blank">
-								<img alt="4399" data-src="./resource/images/navigation/4399.ico">
+								<img alt="4399" data-src="<?=temp_path?>resource/images/navigation/4399.ico">
 								<span class="title">4399</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://github.com/" target="_blank">
-								<img alt="GitHub" data-src="./resource/images/navigation/github.ico">
+								<img alt="GitHub" data-src="<?=temp_path?>resource/images/navigation/github.ico">
 								<span class="title">GitHub</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://mail.qq.com/" target="_blank">
-								<img alt="QQ邮箱" data-src="./resource/images/navigation/email.ico">
+								<img alt="QQ邮箱" data-src="<?=temp_path?>resource/images/navigation/email.ico">
 								<span class="title">邮&nbsp;箱</span>
 							</a>
 						</li>
@@ -1026,9 +1175,9 @@
 					<font color="#FF0000">
 						<b>
 							<a>
-								<img data-src="./resource/images/floatleft/bg_pre.gif" style="width: 8%;">
+								<img data-src="<?=temp_path?>resource/images/floatleft/bg_pre.gif" style="width: 8%;">
 								欢迎大家使用暖导航！希望能够给我们多多提意见！
-								<img data-src="./resource/images/floatleft/bg_next.gif" style="width: 8%;">
+								<img data-src="<?=temp_path?>resource/images/floatleft/bg_next.gif" style="width: 8%;">
 							</a>
 						</b>
 					</font>
@@ -1045,7 +1194,7 @@
 				<br/>
 				<br/>
 				<div align="center">
-					<img data-src="./resource/images/floatleft/chuyin.gif" style="width: 50%;">
+					<img data-src="<?=temp_path?>resource/images/floatleft/chuyin.gif" style="width: 50%;">
 				</div>
 			</ul>
 		</div>
