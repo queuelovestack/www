@@ -1,8 +1,5 @@
-<?php
-	define("temp_path", "http://xiaohquan.oss-cn-hangzhou.aliyuncs.com/");
-	define("spare_path", "./");
-	define("img_type", 1);//type:1.oss,2.weibo,3.local
-?>
+<?php require_once('./define.php');?>
+<?php require_once('./function.php');?>
 <!doctype html>
 <html lang="en">
 	<head>
@@ -108,7 +105,7 @@
 							<div class="search-bar l">
 								<input class="search-bar-input" type="text" placeholder="搜搜你想要的 (>▽<)">
 								<button type="submit" class="search-bar-button">
-									<img data-src="<?=temp_path?>static/img/search.png" width="15" height="15">
+									<img data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>static/img/search.png" width="15" height="15">
 								</button>
 							</div>
 						</div>
@@ -128,7 +125,7 @@
 			</div>
 		</div>
 		<div id="top" class="m-background" style="display: block; background-image: url(<?php
-			switch (img_type) {
+			switch (special_type) {
 				case 1:
 					echo temp_path . 'static/bg/bg1.jpg';
 					break;
@@ -149,7 +146,7 @@
 					<li class="item"><!-- 微博 -->
 						<a target="_blank" href="https://weibo.com/">
 							<img alt="微博" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/weibo.png';
 										break;
@@ -169,7 +166,7 @@
 					<li class="item"><!-- 新闻 -->
 						<a target="_blank" href="http://news.163.com/">
 							<img alt="网易新闻" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/news163.png';
 										break;
@@ -189,7 +186,7 @@
 					<li class="item"><!-- 购物 -->
 						<a target="_blank" href="https://www.taobao.com/">
 							<img alt="淘宝网" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/shopping.png';
 										break;
@@ -209,7 +206,7 @@
 					<li class="item"><!-- 视频 -->
 						<a target="_blank" href="http://www.youku.com/">
 							<img alt="优酷视频" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/videoyouku.png';
 										break;
@@ -229,7 +226,7 @@
 					<li class="item"><!-- 音乐 -->
 						<a target="_blank" href="http://music.163.com/">
 							<img alt="网易云音乐" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/music163.png';
 										break;
@@ -249,7 +246,7 @@
 					<li class="item"><!-- 知乎 -->
 						<a target="_blank" href="https://www.zhihu.com/explore">
 							<img alt="知乎" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/zhihu.png';
 										break;
@@ -269,7 +266,7 @@
 					<li class="item"><!-- 创作 -->
 						<a target="_blank" href="http://www.jianshu.com/">
 							<img alt="简书" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/jianshu.png';
 										break;
@@ -289,7 +286,7 @@
 					<li class="item"><!-- 阅读 -->
 						<a target="_blank" href="https://www.qidian.com/">
 							<img alt="起点中文网" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/read.png';
 										break;
@@ -309,7 +306,7 @@
 					<li class="item"><!-- 游戏 -->
 						<a target="_blank" href="http://game.qq.com/">
 							<img alt="腾讯游戏" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/gameqq.png';
 										break;
@@ -329,7 +326,7 @@
 					<li class="item"><!-- 漫画 -->
 						<a target="_blank" href="http://baozoumanhua.com/">
 							<img alt="暴走漫画" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/caricature.png';
 										break;
@@ -349,7 +346,7 @@
 					<li class="item"><!-- 直播 -->
 						<a target="_blank" href="https://www.douyu.com/">
 							<img alt="斗鱼" data-src="<?php
-								switch (img_type) {
+								switch (special_type) {
 									case 1:
 										echo temp_path . 'resource/images/navigation/tvdouyu.png';
 										break;
@@ -371,47 +368,93 @@
 					<ul class="custom-list">
 						<li>
 							<a href="https://tieba.baidu.com/" target="_blank">
-								<img alt="百度贴吧" data-src="<?=temp_path?>resource/images/navigation/tieba.ico">
+								<img alt="百度贴吧" data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/navigation/tieba.ico">
 								<span class="title">贴&nbsp;吧</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://qzone.qq.com/" target="_blank">
-								<img alt="QQ空间" data-src="<?=temp_path?>resource/images/navigation/qzone.ico">
+								<img alt="QQ空间" data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/navigation/qzone.ico">
 								<span class="title">Qzone</span>
 							</a>
 						</li>
 						<li>
 							<a href="http://www.renren.com/" target="_blank">
-								<img alt="人人网" data-src="<?=temp_path?>resource/images/navigation/renren.ico">
+								<img alt="人人网" data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/navigation/renren.ico">
 								<span class="title">人&nbsp;人</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://www.douban.com/" target="_blank">
-								<img alt="豆瓣" data-src="<?=temp_path?>resource/images/navigation/douban.ico">
+								<img alt="豆瓣" data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/navigation/douban.ico">
 								<span class="title">豆&nbsp;瓣</span>
 							</a>
 						</li>
 						<li>
 							<a href="http://www.4399.com/" target="_blank">
-								<img alt="4399" data-src="<?=temp_path?>resource/images/navigation/4399.ico">
+								<img alt="4399" data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/navigation/4399.ico">
 								<span class="title">4399</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://github.com/" target="_blank">
-								<img alt="GitHub" data-src="<?=temp_path?>resource/images/navigation/github.ico">
+								<img alt="GitHub" data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/navigation/github.ico">
 								<span class="title">GitHub</span>
 							</a>
 						</li>
 						<li>
 							<a href="https://mail.qq.com/" target="_blank">
-								<img alt="QQ邮箱" data-src="<?=temp_path?>resource/images/navigation/email.ico">
+								<img alt="QQ邮箱" data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/navigation/email.ico">
 								<span class="title">邮&nbsp;箱</span>
 							</a>
 						</li>
 					</ul>
+				</div>
+			</div>
+			<div id="hot" class="m-border-1 m-inner-1" style="height: 383px;">
+				<div class="m-left" style="height: 383px;width: 280px;">
+					<div class="m-title">
+						<div class="t">
+							热门电视剧
+						</div>
+					</div>
+					<div class="m-content" style="height: 347px;">
+						<iframe vspace="0" hspace="0" scrolling="no" frameborder="0" id="clip" name="clip" width="280" height="380" src="http://top.baidu.com/clip?b=4&hd_h_info=1&width=300&hd_h=1&hd_trend=0&p_name=%E4%BB%8A%E6%97%A5%E7%94%B5%E8%A7%86%E5%89%A7%E6%8E%92%E8%A1%8C%E6%A6%9C&hd_border=1&hd_searches=0&col=1&line=12&t3_color=%23C44A24&key_color=%237d4718&h_color=%23FFFFFF&h_bg=%23FFFFFF" ></iframe>
+					</div>
+				</div>
+				<div class="m-left" style="height: 383px;width: 436px;">
+					<div class="inner-1" style="height: 383px;width: 456px;">
+						<?php
+							for($i = 0; $i < min(count($title), count($img)); $i++){
+								echo '<div class="box-list clearfix">';
+								echo '<div class="box-pic">';
+								echo $img[$i];
+								echo '</div>';
+								echo '<h2>';
+								echo $title[$i];
+								echo '</h2>';
+								echo '<div class="box-bottom">';
+								echo '<span class="src-net">';
+								echo '<a>凤凰娱乐</a>';
+								echo '</span>';
+								echo '<span>';
+								echo '<a>' . $time[$i] . '</a>';
+								echo '</span>';
+								echo '</div>';
+								echo '</div>';
+							}
+						?>
+					</div>
+				</div>
+				<div class="m-right" style="height: 383px;width: 280px;">
+					<div class="m-title">
+						<div class="t">
+							热门综艺
+						</div>
+					</div>
+					<div class="m-content" style="height: 347px;">
+						<iframe vspace="0" hspace="0" scrolling="no" frameborder="0" id="clip" name="clip" width="280" height="380" src="http://top.baidu.com/clip?b=19&hd_h_info=1&width=300&hd_h=1&hd_trend=0&p_name=%E4%BB%8A%E6%97%A5%E7%BB%BC%E8%89%BA%E6%8E%92%E8%A1%8C%E6%A6%9C&hd_border=1&hd_searches=0&col=1&line=12&t3_color=%23C44A24&key_color=%237d4718&h_color=%23FFFFFF&h_bg=%23FFFFFF" ></iframe>
+					</div>
 				</div>
 			</div>
 			<div id="wiki" class="m-border-1 m-inner-1" style="height: 363px;">
@@ -421,7 +464,7 @@
 							柯南百科
 						</div>
 					</div>
-					<div class="m-content knbk-left-bg">
+					<div class="m-content knbk-left-bg" style="height: 327px;">
 						<ul class="m-list">
 							<li style="background-image:url(./resource/images/ico/knbk.ico)">
 								<a class="title">柯南百科第一期(2018/01/01~2018/01/07)</a>
@@ -431,7 +474,7 @@
 					</div>
 				</div>
 				<div class="m-right" style="height: 363px;width: 712px;">
-					<div class="inner" style="height: 363px;width: 732px;">
+					<div class="inner-2" style="height: 363px;width: 732px;">
 					<!-- 来必力City版安装代码 -->
 					<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjMzMy84ODk0">
 						<script type="text/javascript">
@@ -1162,6 +1205,7 @@
 		</div>
 		<ul class="m-jumppod">
 			<li jumpid="top" class="totop" onclick="click_scroll(event);">回到顶部</li>
+			<li jumpid="hot" class="towhere" onclick="click_scroll(event);">热搜</li>
 			<li jumpid="wiki" class="towhere" onclick="click_scroll(event);">百科</li>
 			<li jumpid="website" class="towhere" onclick="click_scroll(event);">网址</li>
 			<li jumpid="bottom" class="tobottom" onclick="click_scroll(event);">直达底部</li>
@@ -1175,9 +1219,9 @@
 					<font color="#FF0000">
 						<b>
 							<a>
-								<img data-src="<?=temp_path?>resource/images/floatleft/bg_pre.gif" style="width: 8%;">
+								<img data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/floatleft/bg_pre.gif" style="width: 8%;">
 								欢迎大家使用暖导航！希望能够给我们多多提意见！
-								<img data-src="<?=temp_path?>resource/images/floatleft/bg_next.gif" style="width: 8%;">
+								<img data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/floatleft/bg_next.gif" style="width: 8%;">
 							</a>
 						</b>
 					</font>
@@ -1194,7 +1238,7 @@
 				<br/>
 				<br/>
 				<div align="center">
-					<img data-src="<?=temp_path?>resource/images/floatleft/chuyin.gif" style="width: 50%;">
+					<img data-src="<?php switch(common_type){case 1:echo temp_path;break;case 2: echo spare_path;break;}?>resource/images/floatleft/chuyin.gif" style="width: 50%;">
 				</div>
 			</ul>
 		</div>
