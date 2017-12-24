@@ -1,0 +1,213 @@
+body,html {
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	width: 100%;
+	background: url(../../static/bg/bg2.jpg) no-repeat;
+	background-size: cover;
+}
+
+.login {
+	position: relative;
+	border: none;
+	margin: 0 auto;
+	background: url(../../static/bg/login.gif) no-repeat;
+	background-size: cover;
+	width: 0;
+	height: 0;
+}
+
+.register {
+	position: relative;
+	border: none;
+	margin: 0 auto;
+	background: url(../../static/bg/register.gif) no-repeat;
+	background-size: cover;
+	width: 0;
+	height: 0;
+}
+
+.register-container {
+	padding: 50% 12% 0% 14%;	
+}
+
+.login-container {
+	padding: 24% 0 0 41%;
+}
+
+.register-form {
+}
+
+.formItem {
+	
+}
+
+.formLabel {
+	font-weight: bold;
+	color: #806741;
+	width: 7em;
+	text-align: center;
+	border: solid 1px transparent;
+}
+
+.ItemError {
+	height: 1.3em;
+	line-height: 1.3em;	
+	color: red;
+}
+
+.formInput {
+	
+}
+
+.formInput input {
+	background: #e6dfbb;
+	font-weight: bold;
+	color: red;
+	border: solid 1px transparent;
+	border-radius: 3px;
+	outline: none;
+	line-height: 1.8;
+	padding-left: 1em;
+	width: 80%;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.8) inset,
+				-1px -1px 1px rgba(0,0,0,.8) inset; 
+}
+
+.formInput input:focus {
+	border: solid 1px #b9a583;
+}
+
+.ItemInfo { 
+	font-size: 1vw;
+	line-height: 1.8em;
+	font-family: "consolas","Heiti SC";
+}
+
+:-moz-placeholder {
+    color: #98886f; opacity:1; 
+}
+
+::-o-placeholder {
+    color: #98886f;opacity:1;
+}
+
+input:-ms-input-placeholder {
+    color: #98886f;opacity:1;
+}
+
+input::-webkit-input-placeholder {
+    color: #98886f;opacity:1;
+}
+
+.submit-register, .submit-login {
+	background: rgba(255,217,160,0.8);
+	border: none;
+	border: solid 2px transparent;
+	box-shadow: 1px 1px 2px rgba(0,0,0,.4),
+	            -1px -1px 2px rgba(0,0,0,.4);
+	color: rgba(128,103,65,.8);
+	padding: 0 3em;
+	line-height: 2.2em;
+	outline: none;
+	cursor: pointer;
+}
+
+.submit-register {
+	margin-right: 15px;
+}
+
+
+.submit-register {
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 15px;
+}
+
+.submit-register:hover, .submit-login:hover {
+	background: rgba(255,217,160,1);
+	color: rgba(128,103,65,1);
+	font-weight: bold;
+	border: solid 2px rgba(128,103,65,1);
+}
+
+
+.submit-login {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 30px;
+}
+
+.submit-item {
+	margin-top: 0.5vw;
+}
+
+.login-item {
+    line-height: 5.2vh;
+    height: 5.2vh;	
+	font-size: 3vh;
+	font-family: "宋体";
+	color: #000;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.login-input {
+	padding: 0 4vh;
+	font-weight: bold;
+	box-shadow: 0 0 5px rgba(0,0,0,1) inset;
+}
+
+.login-input:hover {
+	box-shadow: 0 0 15px rgba(0,0,0,1) inset;
+}
+
+.login-input:focus {
+	box-shadow: 0 0 15px rgba(0,0,0,1) inset;
+}
+
+.login-submit {
+	text-align: center;
+	width: 100%;
+	margin-left: -34.74%;
+}
+
+.login-submit-button {
+	background: url(../../static/bg/LoginButton.png) no-repeat;
+	background-size: cover;
+	width: 25vh;
+	height: 9.2vh;
+	border: none;
+	outline: none;
+}
+
+.other-item {
+	font-size: 1.5vh;
+	line-height: 5vh;
+	padding: 0 .5vh;
+	
+}
+
+.login-other {
+	cursor: pointer;
+	margin-left: -1vw;
+}
+
+.other-item:hover {
+	color: #946434;
+}
+
+.other-item:active {
+	color: #000;
+}
+
+.error-item {
+	color: #bd3740;
+	font-weight: bold;
+}
+
+.register-button {
+    line-height: 2.5em;	
+}
+

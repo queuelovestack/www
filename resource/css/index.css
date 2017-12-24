@@ -877,6 +877,85 @@ a img {
     height: 100%;
 }
 
+.music-player {
+    margin-top: -4px!important;
+}
+
+.transition {
+	        transition: all .2s ease-in-out;
+	     -o-transition: all .2s ease-in-out;
+	    -ms-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+}
+
+.change-music {
+    background: #fff;
+    color: #333;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    margin-top: 6px;
+    margin-left: -10px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #ccc;
+    position: relative; 
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.change-music .change-button:hover {
+	color: #08f;
+}
+
+.change-music .change-button:active {
+	color: #000;
+}
+
+.celling {
+    position: absolute;
+	height: 16px;
+	width: 1px;
+	top: 0;
+	left: -10px;
+	background: #d7d7d7;
+	border-top: 8px solid #fff; 
+	border-bottom: 8px solid #fff;
+	border-left: 10px solid #fff;
+	border-right: 10px solid #fff;
+}
+
+.search-music {
+	height: 20px;
+	border: solid 1px #aaa;
+	border-radius: 13px;
+	line-height: 20px;
+	margin-top: 6px;
+	margin-left: 2px;
+	position: relative;
+}
+
+.search-icon {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	width: 14px;
+	height: 14px;
+	background: url(../../static/img/search.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.search-music input {
+	border: none;
+	outline: none;
+	margin-left: 12px;
+	cursor: text;
+}
+
+.search-music:hover {
+	border: solid 1px #0088fff;
+}
+
 @-webkit-keyframes showbar { 0% { top: -40px } 100% { top: 0px } }
 @-moz-keyframes    showbar { 0% { top: -40px } 100% { top: 0px } }
 @-o-keyframes      showbar { 0% { top: -40px } 100% { top: 0px } }
