@@ -19,9 +19,9 @@
 			
 			#home {
 				width: 1366px;
-				height: 80%;
 				margin: 0 auto;
-				margin-top: 17%;
+				margin-top: 310px;
+				padding: 0;
 			}
 	    </style>
 		<script>
@@ -44,9 +44,9 @@
 					<div class="touchbar-navbar-container">
 						<div class="touchbar-navbar-container-item container-item-active main fix">
 							<div class="r">
-								<span class="navbar-list-item fl1">注册</span>
+								<span class="navbar-list-item fl1 register">注册</span>
 								<span class="padding"></span>
-								<span class="navbar-list-item fl1">登陆</span>
+								<span class="navbar-list-item fl1 login">登陆</span>
 								<span class="padding"></span>
 								<span class="navbar-list-item fl1">个人中心</span>
 								<span class="padding"></span>
@@ -110,8 +110,12 @@
 						<div class="touchbar-navbar-container-item">
 							
 						</div>
-						<div class="touchbar-navbar-container-item ">
-							自定义
+						<div class="touchbar-navbar-container-item fix">
+							<iframe class="music-player l" frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=32432018&auto=0&height=32"></iframe>
+							<div class="change-music transition l">
+								<div class="change-button">换首听听</div>				
+								<div class="celling"></div>
+							</div>
 						</div>
 					</div>
 			    </div>
@@ -1312,7 +1316,6 @@
 		}
 		window.onload = function() {
 			/*事件初始化*/
-				
 			this.initEvents();
 		}
 
@@ -1350,7 +1353,10 @@
 				if(touchbar.className.indexOf("hide-bar") != -1)
 					touchbar.className = "show-bar";
 			},0);
-		} 
+		}
+
+		
+		
 
 		function initEvents() {
 			var font = document.getElementsByClassName("navbar-list-item");
@@ -1364,6 +1370,7 @@
             var select2Item = document.getElementsByClassName("select2-item");
             var select1Items = document.getElementsByClassName("select1-items")[0];
             var select2Items = document.getElementsByClassName("select2-items")[0];
+			
             var index1 = 0;
             var index2 = 0;
             //navbar 点击切换
@@ -1553,7 +1560,47 @@
                 window.open(url);
 			}
 		}
-
+		
+		$(".change-button")[0].addEventListener("click", function(e) {
+			stopPropagation(e);
+			var el = $(".change-button");
+			if(el.css("width") == "200px")
+				return;
+			el.animate({
+				width: "200px"
+			});
+			//el.css("cursor", "text");
+			el.html("<div class='search-music'><input type='text' placeholder='音乐/电台/用户'><div class='search-icon'></div></div>")
+			$(".search-icon")[0].addEventListener("click", function(e) {
+				var val = $(".search-music input").val();
+				val = "http://music.163.com/api/search/get/web?csrf_token="+val;
+				$.ajax({
+					url: "./src/php/getMusic.php",
+					type: "POST",
+					data: {val: val},
+					success: function(res) {
+						console.log(res);
+					},
+					error: function(res) {
+						
+					}
+				});
+			});
+		});
+		
+		$(".register")[0].addEventListener("click", function(){
+			login_register("register");
+		}); 
+		
+		$(".login")[0].addEventListener("click", function(){
+			login_register("login");
+		}); 
+		
+		function login_register(val) {
+			localStorage.setItem('state', val);
+			window.open('./src/php/login.php','_self');
+		}
+		
 		function stopPropagation(e) {
 	        window.event ? window.event.cancelBubble = true : e.stopPropagation();
 	    }
@@ -1563,4 +1610,6 @@
 	    }
 	</script>
 </html>
+
+
 
