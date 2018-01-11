@@ -1413,6 +1413,14 @@
 				var keyword = search.value;
 				searchPage(keyword, index1, index2);
 			});
+			search.addEventListener("keyup", function(e) {
+				console.log(e.keyCode);
+				if(e.keyCode == 13) {
+					var keyword = search.value;
+					searchPage(keyword, index1, index2);
+				}
+				
+			});
 			//文字放大/缩小
 			for(var i = 0;i < font.length;i++) {
 				font[i].addEventListener("mouseleave", function(e) {
